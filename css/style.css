@@ -1,0 +1,92 @@
+/* Color-set */
+@font-face {
+  font-family: "ChosunSm";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ChosunBg";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunBg.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "InkLipquid";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* media query */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  position: relative;
+  color: #2b2222;
+  font-size: 11pt;
+  font-family: "ChosunSm";
+  line-height: 1.8;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+  background-color: #f0f0f0;
+}
+
+#profile_page {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+h1,
+h2,
+p.txt-center {
+  font-weight: normal;
+  text-align: center;
+  text-indent: 0;
+}
+
+h1.ch_talk {
+  font-family: "InkLipquid";
+}
+
+h2 {
+  margin-top: 10vh;
+  font-size: 13pt;
+  font-family: "ChosunBg";
+  text-indent: 0.2em;
+  letter-spacing: 0.2em;
+}
+
+.txt-wrap {
+  padding: 8px 0;
+}
+
+.txt-wrap p {
+  padding: 8px 0;
+}
+
+p {
+  margin: 0;
+  padding: 16px 0;
+  text-align: justify;
+  text-indent: 0.5em;
+}
+
+p em {
+  font-family: "ChosunBg";
+}
+/*# sourceMappingURL=style.css.map */

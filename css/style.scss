@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+/* Color-set */
+$color-black: #2b2222;
+$color-white: #ffffff;
+$color-gray: #f0f0f0;
+$color-point-main: #2e3b46;
+
+// lighten
+@mixin color-lighten($oriColor) {
+    color: lighten($color: $oriColor, $amount: 10);
+}
+@mixin border-lighten($px, $style, $oriColor) {
+    border: $px $style lighten($color: $oriColor, $amount: 10);
+}
+@mixin bg-lighten($oriColor) {
+    background-color: lighten($color: $oriColor, $amount: 10);
+}
+
+// Darken
+@mixin color-darken($oriColor) {
+    color: darken($color: $oriColor, $amount: 10);
+}
+@mixin border-darken($px, $style, $oriColor) {
+    border: $px $style darken($color: $oriColor, $amount: 10);
+}
+@mixin bg-darken($oriColor) {
+    background-color: darken($color: $oriColor, $amount: 10);
+}
+
+// 조선 신명조
+@font-face {
+    font-family: "ChosunSm";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+// 조선 견고딕
+@font-face {
+    font-family: "ChosunBg";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunBg.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+// 잉크립퀴드
+@font-face {
+    font-family: "InkLipquid";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* media query */
+@mixin screen_max($screen) {
+    @media screen and (max-width: $screen) {
+        @content;
+    }
+}
+@mixin screen_min($screen) {
+    @media screen and (min-width: $screen) {
+        @content;
+    }
+}
+
+.clearfix {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+
+body {
+    position: relative;
+    color: $color-black;
+    font-size: 11pt;
+    font-family: "ChosunSm";
+    line-height: 1.8;
+    text-size-adjust: none;
+    background-color: $color-gray;
+}
+
+#profile_page {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+h1,
+h2,
+p.txt-center {
+    font-weight: normal;
+    text-align: center;
+    text-indent: 0;
+}
+
+h1.ch_talk {
+    font-family: "InkLipquid";
+}
+
+h2 {
+    margin-top: 10vh;
+    font-size: 13pt;
+    font-family: "ChosunBg";
+    text-indent: 0.2em;
+    letter-spacing: 0.2em;
+}
+
+.txt-wrap {
+    padding: 8px 0;
+    p {
+        padding: 8px 0;
+    }
+}
+
+p {
+    margin: 0;
+    padding: 16px 0;
+    text-align: justify;
+    text-indent: 0.5em;
+    em {
+        font-family: "ChosunBg";
+    }
+}
