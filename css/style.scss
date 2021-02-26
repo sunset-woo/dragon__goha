@@ -89,7 +89,8 @@ body {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 15vh 0 20vh;
+    padding: 15vh 16px 20vh;
+    box-sizing: border-box;
     overflow: hidden;
 }
 
