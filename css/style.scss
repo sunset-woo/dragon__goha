@@ -1,10 +1,10 @@
 @charset "utf-8";
 
 /* Color-set */
-$color-black: #2b2222;
+$color-black: #222b22;
 $color-white: #ffffff;
 $color-gray: #f0f0f0;
-$color-point-main: #2e3b46;
+$color-point-main: #737a3e;
 
 // lighten
 @mixin color-lighten($oriColor) {
@@ -27,7 +27,13 @@ $color-point-main: #2e3b46;
 @mixin bg-darken($oriColor) {
     background-color: darken($color: $oriColor, $amount: 10);
 }
-
+/* IBM Plex Sans Text*/
+@font-face {
+    font-family: "IBMPlexSansKR-Text";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Text.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
 // 조선 신명조
 @font-face {
     font-family: "ChosunSm";
@@ -62,6 +68,15 @@ $color-point-main: #2e3b46;
     }
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
 .clearfix {
     &::after {
         content: "";
@@ -74,7 +89,6 @@ img {
     max-width: 100%;
 }
 
-
 body {
     position: relative;
     color: $color-black;
@@ -83,17 +97,30 @@ body {
     line-height: 1.8;
     text-size-adjust: none;
     background-color: $color-gray;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        // display: block;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-image: url("../img/bg.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
 }
 
 #profile_page {
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
-    padding: 15vh 16px 20vh;
+    padding: 15vh 16px 50vh;
     box-sizing: border-box;
     overflow: hidden;
 }
-
 
 h1,
 h2,
@@ -104,11 +131,13 @@ p.txt-center {
 }
 
 h1.ch_talk {
+    color: $color-point-main;
     font-family: "InkLipquid";
 }
 
 h2 {
     margin-top: 10vh;
+    color: $color-point-main;
     font-size: 13pt;
     font-family: "ChosunBg";
     text-indent: 0.2em;
@@ -128,6 +157,22 @@ p {
     text-align: justify;
     text-indent: 0.5em;
     em {
+        color: $color-point-main;
+        font-style: normal;
         font-family: "ChosunBg";
+    }
+}
+
+.msg {
+    margin-top: 10vh;
+    padding: 2em 0 8px;
+    font-size: 9pt;
+    font-family: "IBMPlexSansKR-Text";
+    border-top: 2px solid $color-point-main;
+    p {
+        padding: 8px 0;
+    }
+    .postscript {
+        opacity: 0.5;
     }
 }
