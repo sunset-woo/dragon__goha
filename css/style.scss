@@ -1,32 +1,5 @@
 @charset "utf-8";
 
-/* Color-set */
-$color-black: #222b22;
-$color-white: #ffffff;
-$color-gray: #f0f0f0;
-$color-point-main: #737a3e;
-
-// lighten
-@mixin color-lighten($oriColor) {
-    color: lighten($color: $oriColor, $amount: 10);
-}
-@mixin border-lighten($px, $style, $oriColor) {
-    border: $px $style lighten($color: $oriColor, $amount: 10);
-}
-@mixin bg-lighten($oriColor) {
-    background-color: lighten($color: $oriColor, $amount: 10);
-}
-
-// Darken
-@mixin color-darken($oriColor) {
-    color: darken($color: $oriColor, $amount: 10);
-}
-@mixin border-darken($px, $style, $oriColor) {
-    border: $px $style darken($color: $oriColor, $amount: 10);
-}
-@mixin bg-darken($oriColor) {
-    background-color: darken($color: $oriColor, $amount: 10);
-}
 /* IBM Plex Sans Text*/
 @font-face {
     font-family: "IBMPlexSansKR-Text";
@@ -68,13 +41,38 @@ $color-point-main: #737a3e;
     }
 }
 
+/* Color-set */
+$color-black: #151515;
+$color-white: #eeeeee;
+$color-gray: #999999;
+$color-point-main: #c0ed29;
+$color-point-sub: #418368;
+$color-background: #24282d;
+$color-background-gray: #f0f0f0;
+
 * {
     margin: 0;
     padding: 0;
+    &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
 }
 
-*::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera*/
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100% !important;
+}
+
+.txt-center {
+    text-align: center !important;
 }
 
 .clearfix {
@@ -85,82 +83,216 @@ $color-point-main: #737a3e;
     }
 }
 
-img {
-    max-width: 100%;
-}
-
 body {
     position: relative;
-    color: $color-black;
     font-size: 11pt;
     font-family: "ChosunSm";
-    line-height: 1.8;
     text-size-adjust: none;
-    background-color: $color-gray;
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-        // display: block;
-        width: 100%;
-        height: 100%;
-        background-size: contain;
-        background-image: url("../img/bg.jpg");
-        background-repeat: no-repeat;
-        background-position: bottom;
+    &.before {
+        color: $color-black;
+        background-color: $color-background-gray;
+        .point-color {
+            color: $color-point-sub !important;
+        }
+        header {
+            background-color: $color-background-gray;
+        }
+        .menu {
+            li {
+                &.active {
+                    .link {
+                        background-color: darken($color-background-gray, $amount: 15);
+                    }
+                }
+                @include screen_min(1000px) {
+                    &:hover {
+                        .link {
+                            background-color: darken($color-background-gray, $amount: 15) !important;
+                        }
+                    }
+                }
+            }
+        }
+        .link {
+            background-color: darken($color-background-gray, $amount: 5);
+        }
+        .ch_talk,
+        .ch_option_tit {
+            color: $color-point-sub;
+        }
+        .ch_option_txt {
+            color: $color-black;
+            em {
+                color: $color-point-sub;
+            }
+            .point,
+            &.point,
+            &.active {
+                color: $color-black;
+            }
+        }
+        .msg {
+            border-top: 2px solid $color-point-sub;
+        }
     }
+    &.after {
+        color: $color-white;
+        background-color: $color-background;
+        .point-color {
+            color: $color-point-main !important;
+        }
+        header {
+            background-color: $color-background;
+        }
+        .menu {
+            li {
+                &.active {
+                    .link {
+                        background-color: darken($color-background, $amount: 15);
+                    }
+                }
+                @include screen_min(1000px) {
+                    &:hover {
+                        .link {
+                            background-color: darken($color-background, $amount: 15) !important;
+                        }
+                    }
+                }
+            }
+        }
+        .link {
+            background-color: darken($color-background, $amount: 5);
+        }
+        .ch_talk,
+        .ch_option_tit {
+            color: $color-point-main;
+        }
+        .ch_option_txt {
+            color: $color-gray;
+            em {
+                color: $color-point-main;
+            }
+            .point,
+            &.point,
+            &.active {
+                color: $color-white;
+            }
+        }
+        .msg {
+            border-top: 2px solid $color-point-main;
+        }
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 16px;
+    text-align: center;
+}
+
+.menu {
+    display: inline-block;
+    margin: -4px;
+    li {
+        float: left;
+        padding: 4px;
+        list-style: none;
+        &.active {
+            .link {
+                @extend .point-color;
+            }
+        }
+    }
+}
+
+.link {
+    display: block;
+    padding: 0.25em 1em;
+    text-decoration: none;
+    border-radius: 2em;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+    &-item {
+        font-size: 9pt;
+        font-family: "IBMPlexSansKR-Text";
+        i {
+            margin-right: 4px;
+            font-size: 13pt;
+            text-align: center;
+            vertical-align: middle;
+            &.fa-caret-up,
+            &.fa-caret-down {
+                margin-right: 0;
+            }
+        }
+    }
+}
+#effect {
+    margin-left: 4px;
+    @extend .point-color;
 }
 
 #profile_page {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
-    padding: 15vh 16px 50vh;
+    padding: 20vh 16px 15vh;
+    line-height: 1.8;
     box-sizing: border-box;
     overflow: hidden;
 }
 
-h1,
-h2,
-p.txt-center {
+.ch_talk,
+.ch_option_tit {
     font-weight: normal;
     text-align: center;
-    text-indent: 0;
 }
-
-h1.ch_talk {
-    color: $color-point-main;
+.ch_talk {
     font-family: "InkLipquid";
 }
-
-h2 {
-    margin-top: 10vh;
-    color: $color-point-main;
+.ch_option_tit {
+    margin-top: 7.5vh;
     font-size: 13pt;
     font-family: "ChosunBg";
     text-indent: 0.2em;
     letter-spacing: 0.2em;
 }
-
-.txt-wrap {
-    padding: 8px 0;
-    p {
-        padding: 8px 0;
-    }
-}
-
-p {
-    margin: 0;
+.ch_option_txt {
     padding: 16px 0;
     text-align: justify;
     text-indent: 0.5em;
     em {
-        color: $color-point-main;
         font-style: normal;
         font-family: "ChosunBg";
     }
+    &.txt-center {
+        text-indent: 0;
+    }
+}
+.ch_img {
+    padding: 16px 0;
+    filter: drop-shadow(0 0 4px rgba($color-black, 1));
+}
+.ch_power,
+.ch_per,
+.ch_etc {
+    .ch_option_txt {
+        text-indent: 0;
+        &.plus {
+            padding-top: 0;
+            text-indent: 0.5em;
+        }
+    }
+}
+
+.s-txt {
+    font-size: 0.85em;
+    font-family: "IBMPlexSansKR-Text";
+    opacity: 0.5;
 }
 
 .msg {
@@ -168,7 +300,6 @@ p {
     padding: 2em 0 8px;
     font-size: 9pt;
     font-family: "IBMPlexSansKR-Text";
-    border-top: 2px solid $color-point-main;
     p {
         padding: 8px 0;
     }
