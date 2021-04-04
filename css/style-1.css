@@ -266,7 +266,7 @@ header li span {
   margin: -8px 0;
 }
 
-#profile_page p.top {
+#profile_page .p_top {
   position: absolute;
   top: 0;
   left: 0;

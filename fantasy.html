@@ -17,7 +17,7 @@
     <title>오브 레클립스</title>
 </head>
 
-<body oncontextmenu='return false' class="before">
+<body oncontextmenu='return false'>
     <script>
         AOS.init();
     </script>
@@ -25,7 +25,7 @@
     <header>
         <ul class="tabs">
             <li>
-                <div class="list_wrap o_profile">
+                <div class="list_wrap p_top">
                     <div class="circle"></div>
                     <strong>Profile</strong>
                     <span>프로필</span>
@@ -55,7 +55,7 @@
     </div>
 
     <div id="profile_page">
-        <p class="top">Profile Open</p>
+        <p class="p_top">Profile Open</p>
         <div>
             <div id="tab-1" class="ch_app tab">
                 <h3>외관</h3>
@@ -244,16 +244,6 @@
     </footer>
 
     <script>
-        $('.effect-btn').click(function () {
-            $('.ch_option_txt').toggleClass('active');
-            var text = $('#effect').text();
-            if (text == 'on') {
-                $('#effect').text('off');
-            } else {
-                $('#effect').text('on');
-            }
-        });
-
         $('#goto_top').click(function () {
             $('body,html').animate({
                 scrollTop: 0
@@ -269,7 +259,11 @@
             return false;
         });
 
-        $('.top').click(function () {
+        $('.p_top').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            $(this).addClass('current');
             $(".img_box").toggleClass('p_on');
             $("#profile_page").toggleClass('p_on');
         });
