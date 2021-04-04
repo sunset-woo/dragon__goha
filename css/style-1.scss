@@ -154,27 +154,6 @@ h1.ch_talk {
         bottom: 60px;
         line-height: 1;
     }
-
-    &_info_box {
-        position: fixed;
-        top: 15vh;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(50px);
-        left: 5vw;
-        width: 700px;
-        height: 80vh;
-        z-index: 100;
-        overflow: scroll;
-        background-color: $color-white;
-        transition: all 0.3s ease;
-        &.on {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-            animation: dropShadow 4s ease infinite alternate;
-        }
-    }
 }
 
 .cd {
@@ -268,7 +247,7 @@ header {
             padding: 0 50px;
             text-align: center;
             cursor: pointer;
-            &.on,
+            &.current,
             &:hover {
                 strong,
                 span {
@@ -332,20 +311,45 @@ h3 {
 
 .tab {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 5vw;
+    z-index: 50;
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    padding: 5vh 10vh;
+    background-color: $color-white;
+    box-sizing: border-box;
+    border: 1px solid $color-point-main;
+    .char_info_box {
+        height: 100%;
+        overflow: scroll;
+    }
     .inner_wrap {
         margin: -8px 0;
     }
     p {
         margin: 0 auto;
         padding: 8px 16px;
-        width: 600px;
         line-height: 1.5;
         text-align: justify;
-        box-sizing: border-box;
     }
-    &.current {
-        display: block;
-    }
+}
+
+.mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.closer {
+    display: none;
 }
 
 footer {

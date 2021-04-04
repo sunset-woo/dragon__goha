@@ -147,32 +147,6 @@ h1.ch_talk span {
   line-height: 1;
 }
 
-.char_info_box {
-  position: fixed;
-  top: 15vh;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
-  left: 5vw;
-  width: 700px;
-  height: 80vh;
-  z-index: 100;
-  overflow: scroll;
-  background-color: #fff;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.char_info_box.on {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-animation: dropShadow 4s ease infinite alternate;
-          animation: dropShadow 4s ease infinite alternate;
-}
-
 .cd_catchphrase {
   display: inline-block;
   margin: 0 0 8px 21px;
@@ -286,8 +260,8 @@ header li .list_wrap {
   cursor: pointer;
 }
 
-header li .list_wrap.on strong,
-header li .list_wrap.on span, header li .list_wrap:hover strong,
+header li .list_wrap.current strong,
+header li .list_wrap.current span, header li .list_wrap:hover strong,
 header li .list_wrap:hover span {
   opacity: 1;
 }
@@ -354,6 +328,23 @@ h3::before {
 
 .tab {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 5vw;
+  z-index: 50;
+  width: 100%;
+  max-width: 750px;
+  height: 100%;
+  padding: 5vh 10vh;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #e0ab5a;
+}
+
+.tab .char_info_box {
+  height: 100%;
+  overflow: scroll;
 }
 
 .tab .inner_wrap {
@@ -363,15 +354,24 @@ h3::before {
 .tab p {
   margin: 0 auto;
   padding: 8px 16px;
-  width: 600px;
   line-height: 1.5;
   text-align: justify;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
-.tab.current {
-  display: block;
+.mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.closer {
+  display: none;
 }
 
 footer {
