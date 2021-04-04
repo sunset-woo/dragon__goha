@@ -102,6 +102,12 @@ img {
 .txt-center {
     text-align: center !important;
 }
+.txt_gray {
+    color: $color-gray;
+    .txt-s{
+        font-size: 0.9em;
+    }
+}
 
 .clearfix {
     &::after {
