@@ -116,24 +116,102 @@ body {
     font-size: 11pt;
     font-family: "ChosunSm";
     text-size-adjust: none;
-    background: $color-background;
+    &::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background: $color-background;
+    }
 }
 
-h1.ch_talk {
-    font-size: 38px;
-    font-family: "SoulCoffeeBreak";
-    font-weight: normal;
-    span {
-        color: $color-point-main;
-        font-size: 1.5em;
-        vertical-align: middle;
+header {
+    position: fixed;
+    top: 25px;
+    z-index: 100;
+    width: 100%;
+    ul {
+        display: flex;
+        justify-content: center;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            width: 100%;
+            height: 1px;
+            background-color: $color-black;
+            left: 50%;
+            transform: translate(-50%, 0);
+            bottom: 30px;
+            transition: all 0.3s ease;
+            animation: dropShadow-1 2s ease infinite alternate;
+        }
+    }
+    li {
+        .list_wrap {
+            display: block;
+            padding: 0 50px;
+            text-align: center;
+            cursor: pointer;
+            &.current,
+            &:hover {
+                strong,
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+        .circle {
+            position: relative;
+            width: 16px;
+            height: 16px;
+            margin: 0 auto 8px;
+            border: 1px solid $color-black;
+            border-radius: 50%;
+            background-color: #eaeaea;
+            animation: dropShadow-1 2s ease infinite alternate;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $color-black;
+                box-sizing: border-box;
+            }
+        }
+        strong,
+        span {
+            opacity: 0.25;
+            transition: all 0.3s ease;
+        }
+        strong {
+            display: block;
+            font-size: 10pt;
+            font-weight: normal;
+            font-family: "S-CoreDream-5Medium";
+        }
+        span {
+            color: $color-point-sub;
+            font-size: 9pt;
+            font-family: "S-CoreDream-3Light";
+        }
     }
 }
 
 .img_box {
+    position: absolute;
     margin-top: 10vh;
     width: 100%;
     animation: dropShadow 4s ease infinite alternate;
+    &.p_on {
+        position: fixed;
+    }
 }
 
 .char {
@@ -151,8 +229,68 @@ h1.ch_talk {
     &_default_box {
         position: fixed;
         left: 5vw;
-        bottom: 60px;
+        bottom: 100px;
+        z-index: 10;
         line-height: 1;
+    }
+}
+
+#profile_page {
+    position: fixed;
+    top: calc(100% - 45px);
+    left: 5vw;
+    z-index: 50;
+    width: 100%;
+    max-width: 800px;
+    padding: 10vh 0 10vh;
+    border: 1px solid $color-point-main;
+    background-color: $color-white;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+    >div {
+        
+        overflow: scroll;
+    }
+    .inner_wrap {
+        margin: -8px 0;
+    }
+    p.top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        line-height: 45px;
+        text-align: center;
+        color: $color-point-main;
+        font-size: 10pt;
+        font-family: "S-CoreDream-5Medium";
+        cursor: pointer;
+    }
+    .tab {
+        p {
+            margin: 0 auto;
+            padding: 8px 16px;
+            max-width: 600px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+    }
+    &.p_on {
+        position: relative;
+        border-top: none;
+        border-bottom: none;
+        animation: dropShadow 4s ease infinite alternate;
+    }
+}
+
+h1.ch_talk {
+    font-size: 38px;
+    font-family: "SoulCoffeeBreak";
+    font-weight: normal;
+    span {
+        color: $color-point-main;
+        font-size: 1.5em;
+        vertical-align: middle;
     }
 }
 
@@ -220,81 +358,6 @@ h1.ch_talk {
     }
 }
 
-header {
-    position: fixed;
-    top: 25px;
-    z-index: 100;
-    width: 100%;
-    ul {
-        display: flex;
-        justify-content: center;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 8px;
-            width: 100%;
-            height: 1px;
-            background-color: $color-black;
-            left: 50%;
-            transform: translate(-50%, 0);
-            bottom: 30px;
-            transition: all 0.3s ease;
-            animation: dropShadow-1 2s ease infinite alternate;
-        }
-    }
-    li {
-        .list_wrap {
-            padding: 0 50px;
-            text-align: center;
-            cursor: pointer;
-            &.current,
-            &:hover {
-                strong,
-                span {
-                    opacity: 1;
-                }
-            }
-        }
-        .circle {
-            position: relative;
-            width: 16px;
-            height: 16px;
-            margin: 0 auto 8px;
-            border: 1px solid $color-black;
-            border-radius: 50%;
-            background-color: #eaeaea;
-            animation: dropShadow-1 2s ease infinite alternate;
-            &::before {
-                content: "";
-                position: absolute;
-                top: 4px;
-                left: 4px;
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                background-color: $color-black;
-                box-sizing: border-box;
-            }
-        }
-        strong,
-        span {
-            opacity: 0.25;
-            transition: all 0.3s ease;
-        }
-        strong {
-            display: block;
-            font-size: 10pt;
-            font-weight: normal;
-            font-family: "S-CoreDream-5Medium";
-        }
-        span {
-            color: $color-point-sub;
-            font-size: 9pt;
-            font-family: "S-CoreDream-3Light";
-        }
-    }
-}
-
 h3 {
     margin: 90px 0 32px;
     font-size: 22px;
@@ -307,49 +370,6 @@ h3 {
         margin-bottom: 1em;
         font-size: 16px;
     }
-}
-
-.tab {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 5vw;
-    z-index: 50;
-    width: 100%;
-    max-width: 750px;
-    height: 100%;
-    padding: 5vh 10vh;
-    background-color: $color-white;
-    box-sizing: border-box;
-    border: 1px solid $color-point-main;
-    .char_info_box {
-        height: 100%;
-        overflow: scroll;
-    }
-    .inner_wrap {
-        margin: -8px 0;
-    }
-    p {
-        margin: 0 auto;
-        padding: 8px 16px;
-        line-height: 1.5;
-        text-align: justify;
-    }
-}
-
-.mask {
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    backdrop-filter: blur(10px);
-}
-
-.closer {
-    display: none;
 }
 
 footer {

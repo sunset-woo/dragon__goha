@@ -25,24 +25,45 @@
     <header>
         <ul class="tabs">
             <li>
-                <div class="list_wrap o_profile">
+                <a href="#tab-1" class="list_wrap">
                     <div class="circle"></div>
-                    <strong>Profile</strong>
-                    <span>프로필</span>
-                </div>
+                    <strong>Appearance</strong>
+                    <span>외관</span>
+                </a>
+            </li>
+            <li>
+                <a href="#tab-2" class="list_wrap">
+                    <div class="circle"></div>
+                    <strong>Magic</strong>
+                    <span>마법</span>
+                </a>
+            </li>
+            <li>
+                <a href="#tab-3" class="list_wrap">
+                    <div class="circle"></div>
+                    <strong>Personality</strong>
+                    <span>성격</span>
+                </a>
+            </li>
+            <li>
+                <a href="#tab-4" class="list_wrap">
+                    <div class="circle"></div>
+                    <strong>Etc</strong>
+                    <span>기타</span>
+                </a>
+            </li>
+            <li>
+                <a href="./fantasy.html" class="list_wrap closer">
+                    <div class="circle"></div>
+                    <strong>Close</strong>
+                    <span>닫기</span>
+                </a>
             </li>
         </ul>
     </header>
 
-    <div class="img_box">
+    <div class="img_box fixed">
         <img src="./img/img_fantasy.png" alt="우여휘 서양 판타지 AU 이미지">
-    </div>
-
-    <div class="char_talk_box">
-        <h1 class="ch_talk">
-            “ 이미 충분히, <span>일반적인 기준</span>에서,<br>불쾌해할 만한 <span>논조</span>로 말하고 있지 않나? ”
-        </h1>
-        <p>… 동의하지 않더라도, 달라질 것은 없겠지만.</p>
     </div>
 
     <div class="char_default_box">
@@ -55,8 +76,7 @@
     </div>
 
     <div id="profile_page">
-        <p class="top">Profile Open</p>
-        <div>
+        <div class="char_info_box">
             <div id="tab-1" class="ch_app tab">
                 <h3>외관</h3>
                 <div class="inner_wrap">
@@ -100,6 +120,7 @@
                     </p>
                 </div>
             </div>
+
             <div id="tab-2" class="ch_magic tab">
                 <h3>마법</h3>
                 <div class="inner_wrap">
@@ -117,6 +138,7 @@
                     </p>
                 </div>
             </div>
+
             <div id="tab-3" class="ch_char tab">
                 <h3>성격</h3>
                 <div class="inner_wrap">
@@ -152,6 +174,7 @@
                     </p>
                 </div>
             </div>
+
             <div id="tab-4" class="ch_etc tab">
                 <h3>기타</h3>
                 <div class="inner_wrap">
@@ -267,11 +290,6 @@
                 scrollTop: scrollHeight
             }, 800);
             return false;
-        });
-
-        $('.top').click(function () {
-            $(".img_box").toggleClass('p_on');
-            $("#profile_page").toggleClass('p_on');
         });
     </script>
 </body>
