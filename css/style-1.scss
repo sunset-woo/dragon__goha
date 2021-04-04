@@ -104,7 +104,7 @@ img {
 }
 .txt_gray {
     color: $color-gray;
-    .txt-s{
+    &.txt-s{
         font-size: 0.85em;
     }
 }
