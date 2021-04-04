@@ -91,6 +91,14 @@ img {
   text-align: center !important;
 }
 
+.txt_gray {
+  color: #999;
+}
+
+.txt_gray .txt-s {
+  font-size: 0.9em;
+}
+
 .clearfix::after {
   content: "";
   display: block;
