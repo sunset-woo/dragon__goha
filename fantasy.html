@@ -205,13 +205,14 @@
             $('body,html').animate({
                 scrollTop: 0
             }, 800);
-            $(this).addClass('current');
+            $(this).hide();
             $(".mask").toggle();
             $(".img_box").toggleClass('p_on');
             $("#profile_page").toggleClass('p_on');
         });
         $('.mask').click(function () {
             $(this).hide();
+            $('.p_top').show();
             $('.p_top').removeClass('current');
             $(".img_box").removeClass('p_on');
             $("#profile_page").removeClass('p_on');
