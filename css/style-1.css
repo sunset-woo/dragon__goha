@@ -250,16 +250,13 @@ header li span {
   width: 100%;
   max-width: 800px;
   padding: 10vh 0 10vh;
+  overflow: hidden;
   border: 1px solid #e0ab5a;
   background-color: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-}
-
-#profile_page > div {
-  overflow: scroll;
 }
 
 #profile_page .inner_wrap {
@@ -289,6 +286,7 @@ header li span {
 
 #profile_page.p_on {
   position: relative;
+  margin: 0 auto;
   border-top: none;
   border-bottom: none;
   -webkit-animation: dropShadow 4s ease infinite alternate;
@@ -411,6 +409,18 @@ footer {
 
 footer p {
   text-align: right;
+}
+
+.mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 @-webkit-keyframes dropShadow {

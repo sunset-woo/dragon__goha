@@ -243,14 +243,11 @@ header {
     width: 100%;
     max-width: 800px;
     padding: 10vh 0 10vh;
+    overflow: hidden;
     border: 1px solid $color-point-main;
     background-color: $color-white;
     box-sizing: border-box;
     transition: all 0.5s ease;
-    >div {
-        
-        overflow: scroll;
-    }
     .inner_wrap {
         margin: -8px 0;
     }
@@ -277,6 +274,7 @@ header {
     }
     &.p_on {
         position: relative;
+        margin: 0 auto;
         border-top: none;
         border-bottom: none;
         animation: dropShadow 4s ease infinite alternate;
@@ -385,6 +383,17 @@ footer {
     p {
         text-align: right;
     }
+}
+
+.mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    backdrop-filter: blur(10px);
 }
 
 @keyframes dropShadow {
