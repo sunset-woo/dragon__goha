@@ -68,6 +68,16 @@
   /* Chrome, Safari, Opera*/
 }
 
+* ::-moz-selection {
+  background: #e0ab5a;
+  color: #e0ab5a;
+}
+
+* ::selection {
+  background: #e0ab5a;
+  color: #e0ab5a;
+}
+
 ul,
 ol,
 li {

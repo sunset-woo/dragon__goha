@@ -78,6 +78,10 @@ $color-background: linear-gradient(-45deg, #eaeaea, #f2f2f2);
     &::-webkit-scrollbar {
         display: none; /* Chrome, Safari, Opera*/
     }
+    ::selection {
+        background: $color-point-main;
+        color: $color-point-main;
+    }
 }
 
 ul,
@@ -105,7 +109,7 @@ img {
 .txt_gray {
     color: $color-gray;
 }
-.txt-s{
+.txt-s {
     font-size: 0.85em;
 }
 
