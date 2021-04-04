@@ -68,12 +68,12 @@
   /* Chrome, Safari, Opera*/
 }
 
-* ::-moz-selection {
+*::-moz-selection {
   background: #e0ab5a;
   color: #e0ab5a;
 }
 
-* ::selection {
+*::selection {
   background: #e0ab5a;
   color: #e0ab5a;
 }
