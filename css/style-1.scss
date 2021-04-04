@@ -117,7 +117,7 @@ body {
     font-family: "ChosunSm";
     text-size-adjust: none;
     &::after {
-        content: '';
+        content: "";
         position: fixed;
         top: 0;
         bottom: 0;
@@ -212,6 +212,9 @@ header {
     &.p_on {
         position: fixed;
     }
+    @include screen_max(1000px) {
+        position: relative;
+    }
 }
 
 .char {
@@ -225,6 +228,22 @@ header {
             margin-top: 1em;
             color: $color-point-sub;
         }
+        @include screen_max(1000px) {
+            top: 5vh;
+            left: 5vh;
+            text-align: left;
+            p {
+                text-align: center;
+            }
+        }
+        @include screen_max(480px) {
+            top: 16px;
+            left: 16px;
+            p {
+                margin-top: 5px;
+                font-size: 10px;
+            }
+        }
     }
     &_default_box {
         position: fixed;
@@ -232,6 +251,10 @@ header {
         bottom: 100px;
         z-index: 10;
         line-height: 1;
+        @include screen_max(480px) {
+            bottom: 30vh;
+            line-height: inherit;
+        }
     }
 }
 
@@ -249,7 +272,9 @@ header {
     box-sizing: border-box;
     transition: all 0.5s ease;
     .inner_wrap {
-        margin: -8px 0;
+        margin: -8px auto;
+        max-width: 600px;
+        box-sizing: border-box;
     }
     .p_top {
         position: absolute;
@@ -264,20 +289,78 @@ header {
         cursor: pointer;
     }
     .tab {
+        h4 {
+            padding: 8px 16px 4px;
+            font-weight: normal;
+            font-family: "ChosunKg";
+            color: $color-point-main;
+            &:not(:first-of-type) {
+                margin-top: 0.5em;
+            }
+        }
         p {
+            position: relative;
             margin: 0 auto;
             padding: 8px 16px;
-            max-width: 600px;
             line-height: 1.5;
             text-align: justify;
+            text-indent: 0.5em;
+        }
+        .msg {
+            background-color: rgba($color-point-main, 0.5);
+            .msg_txt {
+                display: none;
+                position: absolute;
+                left: 0;
+                z-index: 5;
+                margin: 0 15px;
+                padding: 10px 20px;
+                font-size: 9pt;
+                font-family: "S-CoreDream-3Light";
+                text-indent: 0;
+                background-color: $color-white;
+                border: 1px solid $color-point-main;
+                &.txt1 {
+                    top: 33px;
+                }
+                &.txt2 {
+                    top: 121px;
+                }
+                &.txt3 {
+                    top: 55px;
+                }
+            }
+            @include screen_max(1000px) {
+                cursor: pointer;
+                .msg_txt {
+                    position: static;
+                    &.on {
+                        display: block;
+                    }
+                }
+            }
+            @include screen_min(1001px) {
+                &:hover {
+                    .msg_txt {
+                        display: block;
+                    }
+                }
+            }
         }
     }
     &.p_on {
         position: relative;
+        left: 0;
         margin: 0 auto;
         border-top: none;
         border-bottom: none;
         animation: dropShadow 4s ease infinite alternate;
+    }
+    @include screen_max(1000px) {
+        position: relative;
+        top: 15vh;
+        left: 0;
+        max-width: none;
     }
 }
 
@@ -290,6 +373,9 @@ h1.ch_talk {
         font-size: 1.5em;
         vertical-align: middle;
     }
+    @include screen_max(480px) {
+        font-size: 18px;
+    }
 }
 
 .cd {
@@ -301,6 +387,9 @@ h1.ch_talk {
         font-size: 16px;
         font-family: "S-CoreDream-3Light";
         background-color: $color-black;
+        @include screen_max(480px) {
+            font-size: 12px;
+        }
     }
     &_wrap {
         border-left: 5px solid $color-point-main;
@@ -320,6 +409,12 @@ h1.ch_talk {
             color: $color-black;
             font-size: 56px;
             font-family: "S-CoreDream-9Black";
+        }
+        @include screen_max(480px) {
+            font-size: 12px;
+            strong {
+                font-size: 32px;
+            }
         }
     }
     &_position {
@@ -344,6 +439,18 @@ h1.ch_talk {
             font-size: 22px;
             font-family: "S-CoreDream-5Medium";
         }
+        @include screen_max(480px) {
+            strong {
+                font-size: 16px;
+                margin-right: 6px;
+                &::after {
+                    content: none;
+                }
+            }
+            span {
+                font-size: 12px;
+            }
+        }
     }
     &_info {
         display: inline-block;
@@ -353,6 +460,9 @@ h1.ch_talk {
         font-size: 12px;
         font-family: "S-CoreDream-3Light";
         background-color: $color-point-sub;
+        @include screen_max(480px) {
+            font-size: 10px;
+        }
     }
 }
 
