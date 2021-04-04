@@ -69,13 +69,13 @@
 }
 
 *::-moz-selection {
-  background: #e0ab5a;
-  color: #e0ab5a;
+  background: #fff;
+  color: #fff;
 }
 
 *::selection {
-  background: #e0ab5a;
-  color: #e0ab5a;
+  background: #fff;
+  color: #fff;
 }
 
 ul,
