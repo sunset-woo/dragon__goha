@@ -269,7 +269,7 @@ header li span {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .char_talk_box {
     top: 16px;
     left: 16px;
@@ -288,9 +288,9 @@ header li span {
   line-height: 1;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .char_default_box {
-    bottom: 30vh;
+    bottom: 10vh;
     line-height: inherit;
   }
 }
@@ -312,6 +312,12 @@ header li span {
   transition: all 0.5s ease;
 }
 
+@media screen and (max-width: 500px) {
+  #profile_page {
+    border: none;
+  }
+}
+
 #profile_page .inner_wrap {
   margin: -8px auto;
   max-width: 600px;
@@ -330,6 +336,12 @@ header li span {
   font-size: 10pt;
   font-family: "S-CoreDream-5Medium";
   cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  #profile_page .p_top {
+    display: none;
+  }
 }
 
 #profile_page .tab h4 {
@@ -431,7 +443,7 @@ h1.ch_talk span {
   vertical-align: middle;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   h1.ch_talk {
     font-size: 18px;
   }
@@ -447,7 +459,7 @@ h1.ch_talk span {
   background-color: #151515;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .cd_catchphrase {
     font-size: 12px;
   }
@@ -476,7 +488,7 @@ h1.ch_talk span {
   font-family: "S-CoreDream-9Black";
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .cd_name {
     font-size: 12px;
   }
@@ -516,7 +528,7 @@ h1.ch_talk span {
   font-family: "S-CoreDream-5Medium";
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .cd_position strong {
     font-size: 16px;
     margin-right: 6px;
@@ -539,7 +551,7 @@ h1.ch_talk span {
   background-color: #ada397;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .cd_info {
     font-size: 10px;
   }
