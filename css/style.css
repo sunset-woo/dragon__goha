@@ -220,12 +220,26 @@ header {
   margin-left: 4px;
 }
 
+#profile_img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#profile_img .ch_img {
+  padding: 16px 0;
+  -webkit-filter: drop-shadow(0 0 4px #151515);
+          filter: drop-shadow(0 0 4px #151515);
+}
+
 #profile_page {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  margin-left: 50%;
   padding: 20vh 16px 15vh;
-  line-height: 1.8;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
@@ -250,12 +264,6 @@ header {
 
 .ch_option_txt.txt-center {
   text-indent: 0;
-}
-
-.ch_img {
-  padding: 16px 0;
-  -webkit-filter: drop-shadow(0 0 4px #151515);
-          filter: drop-shadow(0 0 4px #151515);
 }
 
 .ch_power .ch_option_txt,

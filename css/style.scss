@@ -242,12 +242,23 @@ header {
     @extend .point-color;
 }
 
+#profile_img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    box-sizing: border-box;
+    .ch_img {
+        padding: 16px 0;
+        filter: drop-shadow(0 0 4px rgba($color-black, 1));
+    }
+}
+
 #profile_page {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
+    position: relative;
+    width: 50%;
+    margin-left: 50%;
     padding: 20vh 16px 15vh;
-    line-height: 1.8;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -278,11 +289,6 @@ header {
     &.txt-center {
         text-indent: 0;
     }
-}
-
-.ch_img {
-    padding: 16px 0;
-    filter: drop-shadow(0 0 4px rgba($color-black, 1));
 }
 
 .ch_power,
