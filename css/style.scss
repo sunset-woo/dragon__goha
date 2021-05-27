@@ -92,6 +92,7 @@ img {
 
 body {
     position: relative;
+    font-size: 11pt;
     text-size-adjust: none;
     &.before {
         color: $color-black;
@@ -253,7 +254,7 @@ header {
 
 .ch_talk,
 .ch_option_tit {
-    text-align: center;
+    // text-align: center;
 }
 
 .ch_talk {
