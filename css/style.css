@@ -223,6 +223,7 @@ header {
 #profile_img {
   position: fixed;
   top: 0;
+  bottom: 0;
   left: 0;
   width: 50%;
   -webkit-box-sizing: border-box;
