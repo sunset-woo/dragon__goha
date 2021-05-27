@@ -230,6 +230,8 @@ header {
 }
 
 #profile_img .ch_img {
+  position: relative;
+  overflow-y: scroll;
   padding: 16px 0;
   -webkit-filter: drop-shadow(0 0 4px #151515);
           filter: drop-shadow(0 0 4px #151515);

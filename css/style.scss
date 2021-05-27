@@ -249,6 +249,8 @@ header {
     width: 50%;
     box-sizing: border-box;
     .ch_img {
+        position: relative;
+        overflow-y: scroll;
         padding: 16px 0;
         filter: drop-shadow(0 0 4px rgba($color-black, 1));
     }
