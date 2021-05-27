@@ -220,6 +220,14 @@ header {
   margin-left: 4px;
 }
 
+@media screen and (max-width: 1000px) {
+  #profile_img,
+  #profile_page {
+    width: 100%;
+    margin: 0;
+  }
+}
+
 #profile_img {
   position: fixed;
   top: 0;
