@@ -259,10 +259,6 @@ header {
   }
 }
 
-.ch_option {
-  background-color: #eeeeee;
-}
-
 .ch_talk,
 .ch_option_tit {
   text-align: center;
@@ -279,6 +275,7 @@ header {
   padding: 16px 0;
   text-align: justify;
   text-indent: 0.5em;
+  background-color: #eeeeee;
 }
 
 .ch_option_txt em {
