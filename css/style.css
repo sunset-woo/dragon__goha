@@ -20,8 +20,7 @@ h3,
 h4,
 h5,
 h6,
-strong,
-em {
+strong {
   padding: 4rem;
   font-family: 'SEBANG_Gothic_Bold';
   text-transform: uppercase;
@@ -114,6 +113,7 @@ body.before .ch_option_txt {
 
 body.before .ch_option_txt em {
   color: #418368;
+  font-family: 'SEBANG_Gothic_Bold';
 }
 
 body.before .ch_option_txt .point, body.before .ch_option_txt.point, body.before .ch_option_txt.active {
@@ -162,6 +162,7 @@ body.after .ch_option_txt {
 
 body.after .ch_option_txt em {
   color: #c0ed29;
+  font-family: 'SEBANG_Gothic_Bold';
 }
 
 body.after .ch_option_txt .point, body.after .ch_option_txt.point, body.after .ch_option_txt.active {
@@ -281,7 +282,7 @@ header {
 }
 
 .ch_option_txt em {
-  font-style: normal;
+  font-family: 'SEBANG_Gothic_Bold';
 }
 
 .ch_option_txt.txt-center {

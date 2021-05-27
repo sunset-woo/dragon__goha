@@ -35,8 +35,7 @@ h3,
 h4,
 h5,
 h6,
-strong,
-em {
+strong {
     padding: 4rem;
     font-family: 'SEBANG_Gothic_Bold';
     text-transform: uppercase;
@@ -132,6 +131,7 @@ body {
             color: $color-black;
             em {
                 color: $color-point-sub;
+                font-family: 'SEBANG_Gothic_Bold';
             }
             .point,
             &.point,
@@ -179,6 +179,7 @@ body {
             color: $color-gray;
             em {
                 color: $color-point-main;
+                font-family: 'SEBANG_Gothic_Bold';
             }
             .point,
             &.point,
@@ -301,7 +302,7 @@ header {
     text-indent: 0.5em;
     background-color: $color-white;
     em {
-        font-style: normal;
+        font-family: 'SEBANG_Gothic_Bold';
     }
     &.txt-center {
         text-indent: 0;
