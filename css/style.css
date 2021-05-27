@@ -1031,132 +1031,132 @@ ul.feature-icons li:nth-child(2) {
   }
   @-webkit-keyframes epileptic {
     0% {
-      background-position: 29px, 29px;
+      background-position: -15px, 2px;
     }
     5% {
-      background-position: 45px, -28px;
+      background-position: 43px, -22px;
     }
     10% {
-      background-position: -32px, -16px;
+      background-position: 23px, -32px;
     }
     15% {
-      background-position: 46px, -9px;
+      background-position: 45px, -35px;
     }
     20% {
-      background-position: 37px, -30px;
+      background-position: -27px, -37px;
     }
     25% {
-      background-position: -33px, 5px;
+      background-position: -14px, -4px;
     }
     30% {
-      background-position: -40px, -18px;
+      background-position: -5px, -26px;
     }
     35% {
-      background-position: -18px, -6px;
+      background-position: 13px, 46px;
     }
     40% {
-      background-position: -1px, 17px;
+      background-position: -12px, 46px;
     }
     45% {
-      background-position: -4px, -49px;
+      background-position: 0px, -47px;
     }
     50% {
-      background-position: 48px, 15px;
+      background-position: -20px, 47px;
     }
     55% {
-      background-position: 47px, 1px;
+      background-position: -7px, 25px;
     }
     60% {
-      background-position: -19px, -35px;
+      background-position: 11px, 14px;
     }
     65% {
-      background-position: -11px, -10px;
+      background-position: 48px, -48px;
     }
     70% {
-      background-position: 20px, 41px;
+      background-position: -41px, -30px;
     }
     75% {
-      background-position: 44px, 43px;
+      background-position: 0px, 25px;
     }
     80% {
-      background-position: 15px, -16px;
+      background-position: 15px, -14px;
     }
     85% {
-      background-position: 11px, 23px;
+      background-position: -1px, -27px;
     }
     90% {
-      background-position: 34px, 48px;
+      background-position: 47px, -36px;
     }
     95% {
-      background-position: -15px, 28px;
+      background-position: 34px, 9px;
     }
     100% {
-      background-position: -1px, 38px;
+      background-position: 23px, -18px;
     }
   }
   @keyframes epileptic {
     0% {
-      background-position: 29px, 29px;
+      background-position: -15px, 2px;
     }
     5% {
-      background-position: 45px, -28px;
+      background-position: 43px, -22px;
     }
     10% {
-      background-position: -32px, -16px;
+      background-position: 23px, -32px;
     }
     15% {
-      background-position: 46px, -9px;
+      background-position: 45px, -35px;
     }
     20% {
-      background-position: 37px, -30px;
+      background-position: -27px, -37px;
     }
     25% {
-      background-position: -33px, 5px;
+      background-position: -14px, -4px;
     }
     30% {
-      background-position: -40px, -18px;
+      background-position: -5px, -26px;
     }
     35% {
-      background-position: -18px, -6px;
+      background-position: 13px, 46px;
     }
     40% {
-      background-position: -1px, 17px;
+      background-position: -12px, 46px;
     }
     45% {
-      background-position: -4px, -49px;
+      background-position: 0px, -47px;
     }
     50% {
-      background-position: 48px, 15px;
+      background-position: -20px, 47px;
     }
     55% {
-      background-position: 47px, 1px;
+      background-position: -7px, 25px;
     }
     60% {
-      background-position: -19px, -35px;
+      background-position: 11px, 14px;
     }
     65% {
-      background-position: -11px, -10px;
+      background-position: 48px, -48px;
     }
     70% {
-      background-position: 20px, 41px;
+      background-position: -41px, -30px;
     }
     75% {
-      background-position: 44px, 43px;
+      background-position: 0px, 25px;
     }
     80% {
-      background-position: 15px, -16px;
+      background-position: 15px, -14px;
     }
     85% {
-      background-position: 11px, 23px;
+      background-position: -1px, -27px;
     }
     90% {
-      background-position: 34px, 48px;
+      background-position: 47px, -36px;
     }
     95% {
-      background-position: -15px, 28px;
+      background-position: 34px, 9px;
     }
     100% {
-      background-position: -1px, 38px;
+      background-position: 23px, -18px;
     }
   }
   #wrapper > section > header > * {
