@@ -102,8 +102,7 @@ body.before .link {
   background-color: #e3e3e3;
 }
 
-body.before .ch_talk,
-body.before .ch_option_tit {
+body.before .ch_talk {
   color: #418368;
 }
 
@@ -262,11 +261,6 @@ header {
   }
 }
 
-.ch_talk,
-.ch_option_tit {
-  text-align: center;
-}
-
 .ch_option_tit {
   margin-top: 7.5vh;
   font-size: 13pt;
@@ -282,6 +276,7 @@ header {
 }
 
 .ch_option_txt em {
+  font-style: normal;
   font-family: 'SEBANG_Gothic_Bold';
 }
 

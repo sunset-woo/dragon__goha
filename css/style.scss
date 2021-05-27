@@ -123,8 +123,7 @@ body {
         .link {
             background-color: darken($color-background-gray, $amount: 5);
         }
-        .ch_talk,
-        .ch_option_tit {
+        .ch_talk {
             color: $color-point-sub;
         }
         .ch_option_txt {
@@ -280,15 +279,6 @@ header {
     }
 }
 
-.ch_talk,
-.ch_option_tit {
-    text-align: center;
-}
-
-.ch_talk {
-    // font-family: "InkLipquid";
-}
-
 .ch_option_tit {
     margin-top: 7.5vh;
     font-size: 13pt;
@@ -302,6 +292,7 @@ header {
     text-indent: 0.5em;
     background-color: $color-white;
     em {
+        font-style: normal;
         font-family: 'SEBANG_Gothic_Bold';
     }
     &.txt-center {
