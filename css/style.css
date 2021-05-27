@@ -19,9 +19,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: "Raleway", 'SEBANG_Gothic_Bold', Helvetica, sans-serif;
-  font-weight: 600;
+h6,
+strong {
+  font-family: 'SEBANG_Gothic_Bold';
   letter-spacing: 0.175em;
   line-height: 1.75;
   text-transform: uppercase;
