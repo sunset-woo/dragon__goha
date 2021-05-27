@@ -23,11 +23,11 @@ h6,
 strong {
   font-family: 'SEBANG_Gothic_Bold';
   letter-spacing: 0.175em;
-  line-height: 1.75;
   text-transform: uppercase;
 }
 
 body {
+  line-height: 1.75;
   font-family: 'SEBANG_Gothic_Regular';
 }
 
@@ -67,7 +67,6 @@ img {
 
 body {
   position: relative;
-  font-size: 11pt;
   -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
       -ms-text-size-adjust: none;
@@ -233,7 +232,6 @@ header {
 
 .ch_talk,
 .ch_option_tit {
-  font-weight: normal;
   text-align: center;
 }
 
