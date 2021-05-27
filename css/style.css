@@ -259,6 +259,15 @@ header {
   }
 }
 
+.ch_option {
+  background-color: #eeeeee;
+}
+
+.ch_talk,
+.ch_option_tit {
+  text-align: center;
+}
+
 .ch_option_tit {
   margin-top: 7.5vh;
   font-size: 13pt;

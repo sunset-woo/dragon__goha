@@ -277,9 +277,13 @@ header {
     }
 }
 
+.ch_option {
+    background-color: $color-white;
+}
+
 .ch_talk,
 .ch_option_tit {
-    // text-align: center;
+    text-align: center;
 }
 
 .ch_talk {
