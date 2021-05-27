@@ -256,18 +256,18 @@ header {
         overflow-y: scroll;
         padding: 16px 0;
         filter: drop-shadow(0 0 4px rgba($color-black, 1));
-    }
-    &::after {
-        display: none;
-        position: absolute;
-        left: -500px;
-        right: -500px;
-        top: -500px;
-        bottom: -500px;
-        background: url(../img/noise.png);
-        animation: epileptic 2s steps(1) infinite;
-        @include screen_max(1000px) {
-            display: block;
+        &::after {
+            display: none;
+            position: absolute;
+            left: -500px;
+            right: -500px;
+            top: -500px;
+            bottom: -500px;
+            background: url(../img/noise.png);
+            animation: epileptic 2s steps(1) infinite;
+            @include screen_max(1000px) {
+                display: block;
+            }
         }
     }
     @keyframes epileptic {
