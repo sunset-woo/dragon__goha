@@ -1,15 +1,38 @@
 @charset "utf-8";
-@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
-.jejugothic * {
-    font-family: 'Jeju Gothic', sans-serif;
+
+/* IBM Plex Sans Text*/
+
+@font-face {
+    font-family: "IBMPlexSansKR-Text";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Text.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
-@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
-.jejumyeongjo * {
-    font-family: 'Jeju Myeongjo', serif;
+// 조선 신명조
+@font-face {
+    font-family: "ChosunSm";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,600&display=swap');
+// 조선 견고딕
+@font-face {
+    font-family: "ChosunBg";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunBg.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+// 잉크립퀴드
+@font-face {
+    font-family: "InkLipquid";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /* media query */
 
@@ -23,23 +46,6 @@
     @media screen and (min-width: $screen) {
         @content;
     }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Raleway", Helvetica, sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.175em;
-    line-height: 1.75;
-    text-transform: uppercase;
-}
-
-body {
-    font-family: 'Jeju Gothic', sans-serif;
 }
 
 
@@ -221,6 +227,7 @@ header {
     cursor: pointer;
     &-item {
         font-size: 9pt;
+        font-family: "IBMPlexSansKR-Text";
         i {
             margin-right: 4px;
             font-size: 13pt;
@@ -256,12 +263,13 @@ header {
 }
 
 .ch_talk {
-    // font-family: "InkLipquid";
+    font-family: "InkLipquid";
 }
 
 .ch_option_tit {
     margin-top: 7.5vh;
     font-size: 13pt;
+    font-family: "ChosunBg";
     text-indent: 0.2em;
     letter-spacing: 0.2em;
 }
@@ -272,6 +280,7 @@ header {
     text-indent: 0.5em;
     em {
         font-style: normal;
+        font-family: "ChosunBg";
     }
     &.txt-center {
         text-indent: 0;
@@ -297,6 +306,7 @@ header {
 
 .s-txt {
     font-size: 0.85em;
+    font-family: "IBMPlexSansKR-Text";
     opacity: 0.5;
 }
 
@@ -304,6 +314,7 @@ header {
     margin-top: 10vh;
     padding: 2em 0 8px;
     font-size: 9pt;
+    font-family: "IBMPlexSansKR-Text";
     p {
         padding: 8px 0;
     }

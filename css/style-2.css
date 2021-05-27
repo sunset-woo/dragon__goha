@@ -1,32 +1,33 @@
-@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
-@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,600&display=swap");
-.jejugothic * {
-  font-family: 'Jeju Gothic', sans-serif;
+/* IBM Plex Sans Text*/
+@font-face {
+  font-family: "IBMPlexSansKR-Text";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Text.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.jejumyeongjo * {
-  font-family: 'Jeju Myeongjo', serif;
+@font-face {
+  font-family: "ChosunSm";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ChosunBg";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunBg.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "InkLipquid";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* media query */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Raleway", Helvetica, sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.175em;
-  line-height: 1.75;
-  text-transform: uppercase;
-}
-
-body {
-  font-family: 'Jeju Gothic', sans-serif;
-}
-
 /* Color-set */
 * {
   margin: 0;
@@ -200,6 +201,7 @@ header {
 
 .link-item {
   font-size: 9pt;
+  font-family: "IBMPlexSansKR-Text";
 }
 
 .link-item i {
@@ -234,9 +236,14 @@ header {
   text-align: center;
 }
 
+.ch_talk {
+  font-family: "InkLipquid";
+}
+
 .ch_option_tit {
   margin-top: 7.5vh;
   font-size: 13pt;
+  font-family: "ChosunBg";
   text-indent: 0.2em;
   letter-spacing: 0.2em;
 }
@@ -249,6 +256,7 @@ header {
 
 .ch_option_txt em {
   font-style: normal;
+  font-family: "ChosunBg";
 }
 
 .ch_option_txt.txt-center {
@@ -276,6 +284,7 @@ header {
 
 .s-txt {
   font-size: 0.85em;
+  font-family: "IBMPlexSansKR-Text";
   opacity: 0.5;
 }
 
@@ -283,6 +292,7 @@ header {
   margin-top: 10vh;
   padding: 2em 0 8px;
   font-size: 9pt;
+  font-family: "IBMPlexSansKR-Text";
 }
 
 .msg p {
@@ -292,4 +302,4 @@ header {
 .msg .postscript {
   opacity: 0.5;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style-2.css.map */
