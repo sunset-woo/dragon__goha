@@ -258,7 +258,6 @@ header {
         filter: drop-shadow(0 0 4px rgba($color-black, 1));
     }
     .noise {
-        content: '';
         position: absolute;
         left: -500px;
         right: -500px;
