@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,600&display=swap");
 @font-face {
+  font-family: 'SEBANG_Gothic_Bold';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'SEBANG_Gothic_Regular';
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff") format("woff");
   font-weight: normal;
@@ -13,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", Helvetica, sans-serif;
+  font-family: "Raleway", 'SEBANG_Gothic_Bold', Helvetica, sans-serif;
   font-weight: 600;
   letter-spacing: 0.175em;
   line-height: 1.75;
