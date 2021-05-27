@@ -257,22 +257,24 @@ header {
         padding: 16px 0;
         filter: drop-shadow(0 0 4px rgba($color-black, 1));
     }
-    @include screen_max(1000px) {
-        &::after {
-            position: absolute;
-            left: -500px;
-            right: -500px;
-            top: -500px;
-            bottom: -500px;
-            background: url(../img/noise.png);
-            animation: epileptic 2s steps(1) infinite;
+    &::after {
+        display: none;
+        position: absolute;
+        left: -500px;
+        right: -500px;
+        top: -500px;
+        bottom: -500px;
+        background: url(../img/noise.png);
+        animation: epileptic 2s steps(1) infinite;
+        @include screen_max(1000px) {
+            display: block;
         }
-        @keyframes epileptic {
-            $steps: 20;
-            @for $i from 0 through $steps {
-                #{percentage($i*(1/$steps))} {
-                    transform: translate(random(100) - 50px, random(100) - 50px);
-                }
+    }
+    @keyframes epileptic {
+        $steps: 20;
+        @for $i from 0 through $steps {
+            #{percentage($i*(1/$steps))} {
+                transform: translate(random(100) - 50px, random(100) - 50px);
             }
         }
     }
