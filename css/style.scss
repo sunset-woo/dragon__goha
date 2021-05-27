@@ -35,10 +35,12 @@ h3,
 h4,
 h5,
 h6,
-strong {
+strong,
+em {
+    padding: 4rem;
     font-family: 'SEBANG_Gothic_Bold';
-    letter-spacing: 0.175em;
     text-transform: uppercase;
+    letter-spacing: 0.175em;
 }
 
 body {
