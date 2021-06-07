@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'SEBANG_Gothic_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'paybooc-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,600&display=swap');
+
+/* media query */
+
+@mixin screen_max($screen) {
+    @media screen and (max-width: $screen) {
+        @content;
+    }
+}
+
+@mixin screen_min($screen) {
+    @media screen and (min-width: $screen) {
+        @content;
+    }
+}
+
+// font
+$font-bold: 'SEBANG_Gothic_Bold';
+$font-regular: "Raleway",
+'paybooc-Medium';
+
+// Color-set
+$color-black: #151515;
+$color-white: #fff;
+$color-gray: #999;
+$color-point-main: #c1a473;
+$color-point-sub: #418368;
+$color-background: #000f27;
+
+/**/
+.contents {
+    background-color: #bdb7a8;
+    // background-color: #111c22;
+    padding: 32px;
+}
+
+#castcomment {
+    color: #f0f6da;
+}
+
+#castcomment {
+    background-image: url(../img/box_bg.png);
+    padding: 0.5em 0.7em 0.5em 0.7em;
+}
+
+#castcomment section:not(:last-child) {
+    border-bottom: 1px solid $color-point-main;
+    padding-bottom: 2.0em;
+    border-collapse: separate;
+}
+
+#castcomment section h3 {
+    padding: 2.0em 1% 2.0em 20%;
+    background-color: $color-background;
+    color: $color-point-main;
+    text-shadow: 1px 1px 1px #07141d, 1px 0px 1px #07141d, -1px -1px 1px #07141d, 2px 2px 1px #07141d, 2px 0px 1px #07141d, -2px -2px 1px #07141d;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 20%;
+    font-size: 30px;
+    font-family: $font-regular;
+}
+
+#castcomment section p {
+    margin-top: 0;
+    font-family: $font-regular;
+    line-height: 1.75;
+    padding: 0.3em;
+}
+
+#castcomment section h4 {
+    margin: 0;
+    background-color: $color-background;
+    color: $color-point-main;
+    display: inline-block;
+    width: 100%;
+    padding: 0.3em;
+    box-sizing: border-box;
+    margin-bottom: 0.5%;
+    font-family: 'SEBANG_Gothic_Bold';
+}
