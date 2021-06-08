@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style-t2.css">
+    <!-- <link rel="stylesheet" href="./css/aos.css" type="text/css"> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7f6e05a40e.js" crossorigin="anonymous"></script>
+    <!-- <script src="./js/aos.js"></script> -->
+
+    <title>우 여휘 성장전 프로필</title>
+</head>
+
+<body oncontextmenu='return false'>
+    <!-- nav -->
+    <!-- [ LOAD ] -->
+    <div id="load" _msthidden="1" style="display: none;">
+        <p _msthash="93119" _msttexthash="111566" _msthidden="1">NOW LOADING</p>
+    </div>
+    <div id="loader" class="fadeInUp" style="display: none;" _msthidden="2">
+        <div id="loadcount" _msthidden="2">
+            <p _msthash="206752" _msttexthash="111566" _msthidden="1">NOW LOADING</p>
+            <span id="load-text" _msthash="139607" _msttexthash="8216" _msthidden="1">0%</span>
+            <div id="bar"><span></span></div>
+        </div>
+    </div>
+    <div class="ss_box">
+        <dl>
+            <dt>
+                <img src="img/chara01.png">
+            </dt>
+            <dd>
+                <div class="ss" _msthash="1124214" _msttexthash="475871942"> (기지개를 쭈욱 펴며 여전히 거침없는 걸음으로 중앙을 가로지른다.) 예 연무장이 도대체 어디요? </div>
+            </dd>
+            <div class="clear"></div>
+            <dt>
+                <img src="img/chara02.png">
+            </dt>
+            <dd>
+                <div class="ss" _msthash="1126242" _msttexthash="191196330"> ... ... (앞쪽에 멈추어 서, 연무장이 있는 방향을 향해 가리켰다.)</div>
+            </dd>
+        </dl>
+    </div>
+</body>
+
+<script>
+/*====================================================*/
+//load完了後
+//ロード終了
+$(window).load(function () { //全ての読み込みが完了したら実行
+	// 0.1秒後に処理実行
+	setTimeout(function(){
+		$('#load').delay(0).fadeOut(200);
+	},400);
+	setTimeout(function(){
+		//$(".common_bg").addClass("loaded");
+	},500);
+	
+});
+
+//10秒たったら強制的にロード画面を非表示
+$(function(){
+  setTimeout('stopload()',10000);
+});
+function stopload(){
+	$('#load,#loader').delay(0).fadeOut(200);
+	//$(".common_bg").addClass("loaded");
+}
+</script>
+
+</html>
