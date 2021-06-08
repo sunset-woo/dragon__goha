@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,600&display=swap");
+@font-face {
+  font-family: 'SEBANG_Gothic_Bold';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'paybooc-Medium';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* media query */
+/**/
+.contents {
+  color: #f0f6da;
+  background-color: #bdb7a8;
+  padding: 32px;
+}
+
+#castcomment {
+  padding: 0.5em 0.7em;
+  background-image: url(../img/box_bg.png);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#castcomment section h3 {
+  padding: 2.0em 1%;
+  background-color: #000f27;
+  color: #c1a473;
+  text-shadow: 1px 1px 1px #07141d, 1px 0px 1px #07141d, -1px -1px 1px #07141d, 2px 2px 1px #07141d, 2px 0px 1px #07141d, -2px -2px 1px #07141d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 20%;
+  font-size: 30px;
+  font-family: "paybooc-Medium";
+}
+
+#castcomment section p {
+  position: relative;
+  min-height: 36px;
+  margin: 0;
+  padding: 8px;
+  padding-left: 50px;
+  font-family: "paybooc-Medium";
+  line-height: 1.75;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#castcomment section p::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#castcomment section p.er, #castcomment section p.rainier {
+  margin-bottom: .25em;
+}
+
+#castcomment section p.sunset, #castcomment section p.aube {
+  margin-bottom: 1em;
+}
+
+#castcomment section p.sunset:hover span, #castcomment section p.aube:hover span {
+  display: inline-block;
+}
+
+#castcomment section p.sunset span, #castcomment section p.aube span {
+  display: none;
+  margin-left: .5em;
+  font-size: .85em;
+  font-style: italic;
+  opacity: .5;
+}
+
+#castcomment section p.er::before {
+  background-image: url(../img/er_head.png);
+}
+
+#castcomment section p.sunset::before {
+  background-image: url(../img/sunset_head.png);
+}
+
+#castcomment section p.rainier::before {
+  background-image: url(../img/rainier_head.png);
+}
+
+#castcomment section p.aube::before {
+  background-image: url(../img/aube_head.png);
+}
+
+#castcomment section h4 {
+  margin: 0;
+  background-color: #000f27;
+  color: #c1a473;
+  display: inline-block;
+  width: 100%;
+  padding: 0.3em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 0.5%;
+  font-family: 'SEBANG_Gothic_Bold';
+}
+
+#castcomment section h4::before {
+  content: 'Q.';
+  display: inline-block;
+  margin-right: .5em;
+}
+/*# sourceMappingURL=qna.css.map */

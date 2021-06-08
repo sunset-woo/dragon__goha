@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'SEBANG_Gothic_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'paybooc-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,600&display=swap');
+
+/* media query */
+
+@mixin screen_max($screen) {
+    @media screen and (max-width: $screen) {
+        @content;
+    }
+}
+
+@mixin screen_min($screen) {
+    @media screen and (min-width: $screen) {
+        @content;
+    }
+}
+
+// font
+$font-bold: 'SEBANG_Gothic_Bold';
+$font-regular: 'paybooc-Medium';
+
+// Color-set
+$color-black: #151515;
+$color-white: #fff;
+$color-gray: #999;
+$color-point-main: #c1a473;
+$color-point-sub: #418368;
+$color-background: #000f27;
+
+/**/
+.contents {
+    color: #f0f6da;
+    background-color: #bdb7a8;
+    // background-color: #111c22;
+    padding: 32px;
+}
+
+#castcomment {
+    padding: 0.5em 0.7em;
+    background-image: url(../img/box_bg.png);
+    box-sizing: border-box;
+    section {
+        h3 {
+            padding: 2.0em 1%;
+            background-color: $color-background;
+            color: $color-point-main;
+            text-shadow: 1px 1px 1px #07141d, 1px 0px 1px #07141d, -1px -1px 1px #07141d, 2px 2px 1px #07141d, 2px 0px 1px #07141d, -2px -2px 1px #07141d;
+            box-sizing: border-box;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 0;
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: 20%;
+            font-size: 30px;
+            font-family: $font-regular;
+        }
+        p {
+            position: relative;
+            min-height: 36px;
+            margin: 0;
+            padding: 8px;
+            padding-left: 50px;
+            font-family: $font-regular;
+            line-height: 1.75;
+            box-sizing: border-box;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                display: block;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &.er,
+            &.rainier {
+                margin-bottom: .25em;
+            }
+            &.sunset,
+            &.aube {
+                margin-bottom: 1em;
+                &:hover {
+                    span {
+                        display: inline-block;
+                    }
+                }
+                span {
+                    display: none;
+                    margin-left: .5em;
+                    font-size: .85em;
+                    font-style: italic;
+                    opacity: .5;
+                }
+            }
+            &.er::before {
+                background-image: url(../img/er_head.png);
+            }
+            &.sunset::before {
+                background-image: url(../img/sunset_head.png);
+            }
+            &.rainier::before {
+                background-image: url(../img/rainier_head.png);
+            }
+            &.aube::before {
+                background-image: url(../img/aube_head.png);
+            }
+        }
+        h4 {
+            margin: 0;
+            background-color: $color-background;
+            color: $color-point-main;
+            display: inline-block;
+            width: 100%;
+            padding: 0.3em;
+            box-sizing: border-box;
+            margin-bottom: 0.5%;
+            font-family: 'SEBANG_Gothic_Bold';
+            &::before {
+                content: 'Q.';
+                display: inline-block;
+                margin-right: .5em;
+            }
+        }
+    }
+    
+}
