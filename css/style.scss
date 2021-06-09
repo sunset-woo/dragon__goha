@@ -7,13 +7,6 @@
 }
 
 @font-face {
-    font-family: 'paybooc-Medium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'SEBANG_Gothic_Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff') format('woff');
     font-weight: normal;
@@ -36,18 +29,15 @@
     }
 }
 
-// font
-$font-bold: 'SEBANG_Gothic_Bold';
-$font-regular: 'paybooc-Medium';
 
-// Color-set
+/* Color-set */
+
 $color-black: #151515;
 $color-white: #fff;
 $color-gray: #999;
 $color-point-main: #c0ed29;
 $color-point-sub: #418368;
 $color-background: #24282d;
-
 html,
 body,
 div,
@@ -151,10 +141,6 @@ section {
     display: block;
 }
 
-body {
-    line-height: 1;
-}
-
 ol,
 ul {
     list-style: none;
@@ -163,14 +149,6 @@ ul {
 blockquote,
 q {
     quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
 }
 
 table {
@@ -208,22 +186,8 @@ textarea {
     }
 }
 
-html {
-    box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
 *::-webkit-scrollbar {
     display: none;
-}
-
-html {
-    overflow-x: hidden;
 }
 
 body {
@@ -260,7 +224,7 @@ input,
 select,
 textarea {
     color: $color-black;
-    font-family: $font-regular;
+    font-family: 'SEBANG_Gothic_Regular';
     font-size: 1rem;
     letter-spacing: 0.0375em;
     line-height: 2;
@@ -285,7 +249,7 @@ a:active {
 strong,
 b {
     color: $color-black;
-    font-family: $font-bold;
+    font-family: 'SEBANG_Gothic_Bold';
 }
 
 em,
@@ -304,7 +268,7 @@ h4,
 h5,
 h6 {
     color: $color-black;
-    font-family: "Raleway", $font-bold, Helvetica, sans-serif;
+    font-family: "Raleway", 'SEBANG_Gothic_Bold', Helvetica, sans-serif;
     letter-spacing: 0.175em;
     line-height: 1.75;
     margin: 0 0 1.5rem 0;
@@ -628,62 +592,6 @@ hr.major {
 }
 
 
-/* Feature Icons */
-
-ul.feature-icons {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 3rem 0;
-    padding-left: 0;
-}
-
-ul.feature-icons:first-child {
-    margin-top: 0;
-}
-
-ul.feature-icons li {
-    margin: 2.5rem 0 0 0;
-    padding: 0.5rem 0 0 4.5rem;
-    position: relative;
-    width: 50%;
-}
-
-ul.feature-icons li:before {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M256,0l221.7,128v256L256,512L34.3,384V128L256,0z' fill='rgba(144, 144, 144, 0.1)' /%3E%3C/svg%3E");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    color: $color-black;
-    display: block;
-    font-size: 1.25rem;
-    height: 3.25rem;
-    left: 0;
-    line-height: 3.25rem;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 3.25rem;
-}
-
-ul.feature-icons li:nth-child(1),
-ul.feature-icons li:nth-child(2) {
-    margin-top: 0;
-}
-
-@media screen and (max-width: 736px) {
-    ul.feature-icons {
-        margin: 0 0 3rem 0;
-    }
-    ul.feature-icons li {
-        width: 100%;
-    }
-    ul.feature-icons li:nth-child(2) {
-        margin-top: 2rem;
-    }
-}
-
-
 /* Wrapper */
 
 #wrapper {
@@ -848,6 +756,8 @@ ul.feature-icons li:nth-child(2) {
 
 #wrapper section>.content {
     padding: 0 5rem;
+    text-align: justify;
+    box-sizing: border-box;
 }
 
 #wrapper section>footer {

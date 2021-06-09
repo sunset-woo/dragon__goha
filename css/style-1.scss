@@ -1,0 +1,557 @@
+@charset "utf-8";
+
+/* SoulCoffeeBreak */
+
+@font-face {
+    font-family: "SoulCoffeeBreak";
+    src: url(./font/SoulCoffeeBreak.ttf) format("truetype");
+}
+
+
+/* S-CoreDream */
+
+@font-face {
+    font-family: "S-CoreDream-9Black";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "S-CoreDream-6Bold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "S-CoreDream-3Light";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "S-CoreDream-5Medium";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "S-CoreDream-4Regular";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 조선 */
+
+@font-face {
+    font-family: "ChosunSm";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ChosunKg";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunKg.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* media query */
+
+@mixin screen_max($screen) {
+    @media screen and (max-width: $screen) {
+        @content;
+    }
+}
+
+@mixin screen_min($screen) {
+    @media screen and (min-width: $screen) {
+        @content;
+    }
+}
+
+
+/* Color-set */
+
+$color-black: #151515;
+$color-white: #fff;
+$color-gray: #999;
+$color-point-main: #e0ab5a;
+$color-point-sub: #ada397;
+$color-background: linear-gradient(-45deg,
+#eaeaea,
+#f2f2f2);
+* {
+    margin: 0;
+    padding: 0;
+    &::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera*/
+    }
+    &::selection {
+        background: $color-white;
+        color: $color-white;
+    }
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100% !important;
+}
+
+.txt-center {
+    text-align: center !important;
+}
+
+.txt_gray {
+    color: $color-gray;
+}
+
+.txt-s {
+    font-size: 0.85em;
+}
+
+.clearfix {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+body {
+    position: relative;
+    font-size: 11pt;
+    font-family: "ChosunSm";
+    text-size-adjust: none;
+    &::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background: $color-background;
+    }
+}
+
+header {
+    position: fixed;
+    top: 25px;
+    z-index: 100;
+    width: 100%;
+    ul {
+        display: flex;
+        justify-content: center;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            width: 100%;
+            height: 1px;
+            background-color: $color-black;
+            left: 50%;
+            transform: translate(-50%, 0);
+            bottom: 30px;
+            transition: all 0.3s ease;
+            animation: dropShadow-1 2s ease infinite alternate;
+        }
+    }
+    li {
+        .list_wrap {
+            display: block;
+            padding: 0 50px;
+            text-align: center;
+            cursor: pointer;
+            &.current,
+            &:hover {
+                strong,
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+        .circle {
+            position: relative;
+            width: 16px;
+            height: 16px;
+            margin: 0 auto 8px;
+            border: 1px solid $color-black;
+            border-radius: 50%;
+            background-color: #eaeaea;
+            animation: dropShadow-1 2s ease infinite alternate;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $color-black;
+                box-sizing: border-box;
+            }
+        }
+        strong,
+        span {
+            opacity: 0.25;
+            transition: all 0.3s ease;
+        }
+        strong {
+            display: block;
+            font-size: 10pt;
+            font-weight: normal;
+            font-family: "S-CoreDream-5Medium";
+        }
+        span {
+            color: $color-point-sub;
+            font-size: 9pt;
+            font-family: "S-CoreDream-3Light";
+        }
+    }
+}
+
+.img_box {
+    position: absolute;
+    margin-top: 10vh;
+    width: 100%;
+    animation: dropShadow 4s ease infinite alternate;
+    &.p_on {
+        position: fixed;
+    }
+    @include screen_max(1000px) {
+        position: relative;
+    }
+}
+
+.char {
+    &_talk_box {
+        position: fixed;
+        top: 20vh;
+        left: 15vw;
+        z-index: 10;
+        text-align: center;
+        p {
+            margin-top: 1em;
+            color: $color-point-sub;
+        }
+        @include screen_max(1000px) {
+            top: 5vh;
+            left: 5vh;
+            text-align: left;
+            p {
+                text-align: center;
+            }
+        }
+        @include screen_max(500px) {
+            top: 16px;
+            left: 16px;
+            p {
+                margin-top: 5px;
+                font-size: 10px;
+            }
+        }
+    }
+    &_default_box {
+        position: fixed;
+        left: 5vw;
+        bottom: 100px;
+        z-index: 10;
+        line-height: 1;
+        @include screen_max(500px) {
+            bottom: 10vh;
+            line-height: inherit;
+        }
+    }
+}
+
+#profile_page {
+    position: fixed;
+    top: calc(100% - 45px);
+    left: 5vw;
+    z-index: 50;
+    width: 100%;
+    max-width: 800px;
+    padding: 10vh 0 10vh;
+    overflow: hidden;
+    border: 1px solid $color-point-main;
+    background-color: $color-white;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+    @include screen_max(500px) {
+        border: none;
+    }
+    .inner_wrap {
+        margin: -8px auto;
+        max-width: 600px;
+        box-sizing: border-box;
+    }
+    .p_top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        line-height: 45px;
+        text-align: center;
+        color: $color-point-main;
+        font-size: 10pt;
+        font-family: "S-CoreDream-5Medium";
+        cursor: pointer;
+        @include screen_max(500px) {
+            display: none;
+        }
+    }
+    .tab {
+        h4 {
+            padding: 8px 16px 4px;
+            font-weight: normal;
+            font-family: "ChosunKg";
+            color: $color-point-main;
+            &:not(:first-of-type) {
+                margin-top: 0.5em;
+            }
+        }
+        p {
+            position: relative;
+            margin: 0 auto;
+            padding: 8px 16px;
+            line-height: 1.5;
+            text-align: justify;
+            text-indent: 0.5em;
+        }
+        .msg {
+            background-color: rgba($color-point-main, 0.5);
+            .msg_txt {
+                display: none;
+                position: absolute;
+                left: 0;
+                z-index: 5;
+                margin: 0 15px;
+                padding: 10px 20px;
+                font-size: 9pt;
+                font-family: "S-CoreDream-3Light";
+                text-indent: 0;
+                background-color: $color-white;
+                border: 1px solid $color-point-main;
+                &.txt1 {
+                    top: 33px;
+                }
+                &.txt2 {
+                    top: 121px;
+                }
+                &.txt3 {
+                    top: 55px;
+                }
+            }
+            @include screen_max(1000px) {
+                cursor: pointer;
+                .msg_txt {
+                    position: static;
+                    &.on {
+                        display: block;
+                    }
+                }
+            }
+            @include screen_min(1001px) {
+                &:hover {
+                    .msg_txt {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    &.p_on {
+        position: relative;
+        left: 0;
+        margin: 0 auto;
+        border-top: none;
+        border-bottom: none;
+        animation: dropShadow 4s ease infinite alternate;
+    }
+    @include screen_max(1000px) {
+        position: relative;
+        top: 15vh;
+        left: 0;
+        max-width: none;
+    }
+}
+
+h1.ch_talk {
+    font-size: 38px;
+    font-family: "SoulCoffeeBreak";
+    font-weight: normal;
+    span {
+        color: $color-point-main;
+        font-size: 1.5em;
+        vertical-align: middle;
+    }
+    @include screen_max(500px) {
+        font-size: 18px;
+    }
+}
+
+.cd {
+    &_catchphrase {
+        display: inline-block;
+        margin: 0 0 8px 21px;
+        padding: 3px 10px 5px;
+        color: $color-white;
+        font-size: 16px;
+        font-family: "S-CoreDream-3Light";
+        background-color: $color-black;
+        @include screen_max(500px) {
+            font-size: 12px;
+        }
+    }
+    &_wrap {
+        border-left: 5px solid $color-point-main;
+        margin-bottom: 8px;
+        padding-left: 16px;
+    }
+    &_name {
+        display: inline-block;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+        color: $color-gray;
+        font-size: 16px;
+        font-family: "S-CoreDream-5Medium";
+        border-bottom: 1px solid $color-black;
+        strong {
+            margin-right: 12px;
+            color: $color-black;
+            font-size: 56px;
+            font-family: "S-CoreDream-9Black";
+        }
+        @include screen_max(500px) {
+            font-size: 12px;
+            strong {
+                font-size: 32px;
+            }
+        }
+    }
+    &_position {
+        display: flex;
+        align-items: center;
+        strong {
+            color: $color-black;
+            font-size: 28px;
+            font-family: "S-CoreDream-6Bold";
+            &::after {
+                content: "";
+                display: inline-block;
+                margin: 8px;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: $color-black;
+            }
+        }
+        span {
+            color: $color-point-sub;
+            font-size: 22px;
+            font-family: "S-CoreDream-5Medium";
+        }
+        @include screen_max(500px) {
+            strong {
+                font-size: 16px;
+                margin-right: 6px;
+                &::after {
+                    content: none;
+                }
+            }
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+    &_info {
+        display: inline-block;
+        margin-left: 21px;
+        padding: 4px 10px;
+        color: $color-white;
+        font-size: 12px;
+        font-family: "S-CoreDream-3Light";
+        background-color: $color-point-sub;
+        @include screen_max(500px) {
+            font-size: 10px;
+        }
+    }
+}
+
+h3 {
+    margin: 90px 0 32px;
+    font-size: 22px;
+    font-weight: normal;
+    font-family: "ChosunKg";
+    text-align: center;
+    &::before {
+        content: "✦";
+        display: block;
+        margin-bottom: 1em;
+        font-size: 16px;
+    }
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 20px;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 8pt;
+    font-family: "S-CoreDream-3Light";
+    box-sizing: border-box;
+    p {
+        text-align: right;
+    }
+}
+
+.mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes dropShadow {
+    0% {
+        filter: drop-shadow(0px 0px 2px $color-point-main);
+    }
+    100% {
+        filter: drop-shadow(0px 0px 7px $color-point-main);
+    }
+}
+
+@keyframes dropShadow-1 {
+    100% {
+        filter: drop-shadow(0px 0px 3px $color-point-sub);
+    }
+}

@@ -1,0 +1,305 @@
+/* IBM Plex Sans Text*/
+@font-face {
+  font-family: "IBMPlexSansKR-Text";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Text.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ChosunSm";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ChosunBg";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunBg.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "InkLipquid";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* media query */
+/* Color-set */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera*/
+}
+
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100% !important;
+}
+
+.txt-center {
+  text-align: center !important;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  position: relative;
+  font-size: 11pt;
+  font-family: "ChosunSm";
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+body.before {
+  color: #151515;
+  background-color: #f0f0f0;
+}
+
+body.before .point-color, body.before .menu li.active .link, .menu li.active body.before .link, body.before #effect {
+  color: #418368 !important;
+}
+
+body.before header {
+  background-color: #f0f0f0;
+}
+
+body.before .menu li.active .link {
+  background-color: #cacaca;
+}
+
+@media screen and (min-width: 1000px) {
+  body.before .menu li:hover .link {
+    background-color: #cacaca !important;
+  }
+}
+
+body.before .link {
+  background-color: #e3e3e3;
+}
+
+body.before .ch_talk,
+body.before .ch_option_tit {
+  color: #418368;
+}
+
+body.before .ch_option_txt {
+  color: #151515;
+}
+
+body.before .ch_option_txt em {
+  color: #418368;
+}
+
+body.before .ch_option_txt .point, body.before .ch_option_txt.point, body.before .ch_option_txt.active {
+  color: #151515;
+}
+
+body.before .msg {
+  border-top: 2px solid #418368;
+}
+
+body.after {
+  color: #eeeeee;
+  background-color: #24282d;
+}
+
+body.after .point-color, body.after .menu li.active .link, .menu li.active body.after .link, body.after #effect {
+  color: #c0ed29 !important;
+}
+
+body.after header {
+  background-color: #24282d;
+}
+
+body.after .menu li.active .link {
+  background-color: #020203;
+}
+
+@media screen and (min-width: 1000px) {
+  body.after .menu li:hover .link {
+    background-color: #020203 !important;
+  }
+}
+
+body.after .link {
+  background-color: #191b1f;
+}
+
+body.after .ch_talk,
+body.after .ch_option_tit {
+  color: #c0ed29;
+}
+
+body.after .ch_option_txt {
+  color: #999999;
+}
+
+body.after .ch_option_txt em {
+  color: #c0ed29;
+}
+
+body.after .ch_option_txt .point, body.after .ch_option_txt.point, body.after .ch_option_txt.active {
+  color: #eeeeee;
+}
+
+body.after .msg {
+  border-top: 2px solid #c0ed29;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 16px;
+  text-align: center;
+}
+
+.menu {
+  display: inline-block;
+  margin: -4px;
+}
+
+.menu li {
+  float: left;
+  padding: 4px;
+  list-style: none;
+}
+
+.link {
+  display: block;
+  padding: 0.25em 1em;
+  text-decoration: none;
+  border-radius: 2em;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.link-item {
+  font-size: 9pt;
+  font-family: "IBMPlexSansKR-Text";
+}
+
+.link-item i {
+  margin-right: 4px;
+  font-size: 13pt;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.link-item i.fa-caret-up, .link-item i.fa-caret-down {
+  margin-right: 0;
+}
+
+#effect {
+  margin-left: 4px;
+}
+
+#profile_page {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20vh 16px 15vh;
+  line-height: 1.8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.ch_talk,
+.ch_option_tit {
+  font-weight: normal;
+  text-align: center;
+}
+
+.ch_talk {
+  font-family: "InkLipquid";
+}
+
+.ch_option_tit {
+  margin-top: 7.5vh;
+  font-size: 13pt;
+  font-family: "ChosunBg";
+  text-indent: 0.2em;
+  letter-spacing: 0.2em;
+}
+
+.ch_option_txt {
+  padding: 16px 0;
+  text-align: justify;
+  text-indent: 0.5em;
+}
+
+.ch_option_txt em {
+  font-style: normal;
+  font-family: "ChosunBg";
+}
+
+.ch_option_txt.txt-center {
+  text-indent: 0;
+}
+
+.ch_img {
+  padding: 16px 0;
+  -webkit-filter: drop-shadow(0 0 4px #151515);
+          filter: drop-shadow(0 0 4px #151515);
+}
+
+.ch_power .ch_option_txt,
+.ch_per .ch_option_txt,
+.ch_etc .ch_option_txt {
+  text-indent: 0;
+}
+
+.ch_power .ch_option_txt.plus,
+.ch_per .ch_option_txt.plus,
+.ch_etc .ch_option_txt.plus {
+  padding-top: 0;
+  text-indent: 0.5em;
+}
+
+.s-txt {
+  font-size: 0.85em;
+  font-family: "IBMPlexSansKR-Text";
+  opacity: 0.5;
+}
+
+.msg {
+  margin-top: 10vh;
+  padding: 2em 0 8px;
+  font-size: 9pt;
+  font-family: "IBMPlexSansKR-Text";
+}
+
+.msg p {
+  padding: 8px 0;
+}
+
+.msg .postscript {
+  opacity: 0.5;
+}
+/*# sourceMappingURL=style-2.css.map */
