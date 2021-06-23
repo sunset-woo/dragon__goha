@@ -1,0 +1,517 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,600&display=swap');
+
+// font-set
+@font-face {
+    font-family: "SpoqaHanSansNeo-Light";
+    src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.eot);
+    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.woff2) format("woff2"),
+        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.woff) format("woff"),
+        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "SpoqaHanSansNeo-Regular";
+    src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.eot);
+    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.woff2) format("woff2"),
+        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.woff) format("woff"),
+        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "SpoqaHanSansNeo-Medium";
+    src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.eot);
+    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.woff2) format("woff2"),
+        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.woff) format("woff"),
+        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "SpoqaHanSansNeo-Bold";
+    src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.eot);
+    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.woff2) format("woff2"),
+        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.woff) format("woff"),
+        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'HomemadeApple';
+    src: url(../font/HomemadeApple/HomemadeApple-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InkLipquid';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-L: "SpoqaHanSansNeo-Light";
+$font-R: "SpoqaHanSansNeo-Regular";
+$font-M: "SpoqaHanSansNeo-Medium";
+$font-B: "SpoqaHanSansNeo-Bold";
+$font-hand: 'HomemadeApple',
+'InkLipquid';
+
+// media query
+@mixin screen_max($screen) {
+    @media screen and (max-width: $screen) {
+        @content;
+    }
+}
+
+@mixin screen_min($screen) {
+    @media screen and (min-width: $screen) {
+        @content;
+    }
+}
+
+// color-set
+$color-gray: #999;
+$color-point-main: #c0ed29;
+$color-point-sub: #418368;
+$color-background: #24282d;
+
+// color-grey-scale
+$color-w0: #ffffff;
+$color-w1: #f5f5f5;
+$color-w2: #eeeeee;
+$color-w3: #e0e0e0;
+$color-w4: #bdbdbd;
+$color-b4: #9e9e9e;
+$color-b3: #757575;
+$color-b2: #616161;
+$color-b1: #424242;
+$color-b0: #000000;
+
+
+/* 초기화 */
+
+html {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $color-w4;
+    font-family: $font-R;
+}
+
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+img {
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-w0;
+    font-family: $font-B;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.62em;
+}
+
+h3 {
+    font-size: 1.44em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+legend {
+    display: none;
+}
+
+label,
+input,
+button,
+select,
+img {
+    vertical-align: middle
+}
+
+input,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer
+}
+
+textarea,
+select {
+    font-size: 1em
+}
+
+select {
+    margin: 0
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    word-break: break-all
+}
+
+hr {
+    display: none
+}
+
+pre {
+    overflow-x: scroll;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+label {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+table {
+    width: 100%;
+}
+
+strong {
+    color: $color-w0;
+}
+
+#box {
+    position: relative;
+    height: 100vh;
+    max-height: 936px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 20%;
+}
+
+.deco-box {
+    position: absolute;
+    z-index: 2;
+    margin: -.5rem;
+
+    &.top {
+        top: 3rem;
+    }
+    &.bottom {
+        bottom: 3rem;
+    }
+    &.left {
+        left: 3rem;
+    }
+    &.right {
+        right: 3rem;
+    }
+
+    .dot {
+        display: inline-block;
+        width: .5rem;
+        height: .5rem;
+        margin: .5rem;
+        border-radius: 50%;
+        background-color: $color-w4;
+        &.small {
+            width: .25em;
+            height: .25em;
+            margin: .25em;
+        }
+    }
+    .dot-box {
+        margin: -.25em;
+        .dot {
+            transform-origin: center center;
+            animation: dots 2s 1s infinite;
+            @keyframes dots {
+                0% {
+                    transform: scale(0);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+
+.ch-name-de {
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    padding: 1rem;
+    color: $color-point-main;
+    font-size: 2rem;
+    font-family: $font-hand;
+    font-style: italic; 
+    letter-spacing: .25rem;
+    line-height: 1;
+    transform: rotate(-10deg);
+    transform-origin: right;
+}
+
+.ch-nick {
+    position: absolute;
+    top: 60%;
+    right: 5vw;
+    text-align: right;
+    transform: rotate(-10deg);
+    .ch-num {
+        padding-right: .5rem;
+        color: $color-w0;
+        font-family: $font-L;
+    }
+    .ch-nick-name {
+        padding: .3rem .3rem .3rem 10rem;
+        color: $color-b0;
+        font-size: 1.5rem;
+        font-family: $font-B;
+        letter-spacing: .1rem;
+        line-height: 1;
+        background: linear-gradient(to right, rgba($color-point-main, .2) 0%, rgba($color-point-main, 1) 25%);
+    }
+}
+
+.ch-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+
+    .ch-talk {
+        padding: 2rem 1rem 0;
+        color: $color-point-main;
+        font-size: 2rem;
+        font-family: $font-hand;
+        color: $color-w0;
+        background: linear-gradient(to bottom, rgba($color-b0, 0) 0%, rgba($color-b0, .75) 100%);
+
+        &::before,
+        &::after {
+            display: inline-block;
+            font-family: sans-serif;
+        }
+
+        &::before {
+            content: '\301E';
+            margin-right: 5vw;
+        }
+
+        &::after {
+            margin-left: 6vw;
+            content: '\301F';
+        }
+    }
+
+    &-detail {
+        padding: .25rem 1rem 94px;
+        background: linear-gradient(to bottom, rgba($color-b0, .75) 0%, rgba($color-b0, 1) 100%);
+    }
+
+    span {
+        color: $color-w4;
+
+        &:not(:last-child) {
+            &::after {
+                content: '';
+                display: inline-block;
+                vertical-align: unset;
+                width: 1px;
+                height: .8rem;
+                margin: 0 .5rem;
+                background-color: $color-b2;
+            }
+        }
+
+        &.ch-name-ko {
+            font-family: $font-M;
+        }
+    }
+}
+
+.detail-list {
+    .dl-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        color: $color-b0;
+        border-radius: 50%;
+        background-color: $color-point-main;
+        cursor: pointer;
+        &.power {
+            position: absolute;
+            top: 20vh;
+            right: 25vw;
+        }
+        &.ability {
+            position: absolute;
+            bottom: 35vh;
+            left: 25vw;
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    .page-list {
+        width: 150px;
+        color: $color-b2;
+        .pl-tit {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px 25px;
+            color: $color-b0;
+            font-size: 0.875em;
+            font-family: $font-B;
+            border-radius: 0 10px 0 0;
+            background-color: $color-point-main;
+            cursor: pointer;
+        }
+        i.fas {
+            font-size: 1rem;
+        }
+    }
+    .page-info {
+        display: flex;
+        border-top: 1px solid $color-b2;
+        &-detail {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 400px;
+            padding: 12px 25px;
+            border-right: 1px solid $color-b2;
+            background-color: rgba($color-b0, .75);
+            .p-name-ko {
+                color: $color-w0;
+                font-size: 1.5rem;
+            }
+            .p-name-de {
+                font-family: $font-L;
+                font-size: 0.75em;
+            }
+        }
+    }
+    .list-box {
+        display: flex;
+        li {
+            padding: .5rem;
+        }
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 29px;
+            height: 29px;
+            color: $color-b0;
+            border-radius: 50%;
+            background-color: $color-point-main;
+            cursor: pointer;
+        }
+    }
+    nav {
+        width: calc(100% - 400px);
+        background-color: rgba($color-b0, .75);
+    }
+}
+
+#body {
+    padding: 10vh 1rem 15vh;
+    background-color: $color-b0;
+    box-sizing: border-box;
+    .content {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    p {
+        padding: .5rem;
+        text-align: justify;
+        text-indent: 1rem;
+        line-height: 1.75;
+    }
+    h3 {
+        padding: 5rem 0 1rem;
+        text-align: center;
+    }
+}
+
+.hand {
+    font-family: $font-hand;
+    font-weight: normal;
+    text-align: center;
+    font-style: italic;
+    animation: light 3s infinite;
+    @keyframes light {
+        100% {
+            filter: drop-shadow(0 0 6px $color-point-main);
+        }
+    }
+}

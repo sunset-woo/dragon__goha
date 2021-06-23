@@ -7,71 +7,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/style-t2.css">
-    <!-- <link rel="stylesheet" href="./css/aos.css" type="text/css"> -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/7f6e05a40e.js" crossorigin="anonymous"></script>
-    <!-- <script src="./js/aos.js"></script> -->
 
-    <title>우 여휘 성장전 프로필</title>
+    <title>talk</title>
 </head>
 
 <body oncontextmenu='return false'>
-    <!-- nav -->
-    <!-- [ LOAD ] -->
-    <div id="load" _msthidden="1" style="display: none;">
-        <p _msthash="93119" _msttexthash="111566" _msthidden="1">NOW LOADING</p>
+    <div id="sp_nav">
+        <div id="click_btn">
+            <div id="nav-toggle">
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
     </div>
-    <div id="loader" class="fadeInUp" style="display: none;" _msthidden="2">
-        <div id="loadcount" _msthidden="2">
-            <p _msthash="206752" _msttexthash="111566" _msthidden="1">NOW LOADING</p>
-            <span id="load-text" _msthash="139607" _msttexthash="8216" _msthidden="1">0%</span>
-            <div id="bar"><span></span></div>
+    <div class="second_box">
+        <div class="sub_nav">
+            <a href="?page=movie" class="">
+                <div>動画</div>
+            </a>
+            <a href="?page=twitter">
+                <div>ツイッターアイテム</div>
+            </a>
+            <a href="javascript:void(0)" class="selected" rel="https://www.otomate.jp/d6/special/?page=ss">
+                <div>ショートストーリー</div>
+            </a>
+            <a href="?page=comment">
+                <div>キャストコメント</div>
+            </a>
+        </div>
+
+        <div class="second_box_content">
+            <div id="ss_box_wrap" class="box_wrap">
+                <div class="box">
+                    <div class="read" style="margin-bottom: 10px;">
+                        <div class="read_in"><img src="../img/special/read_ss.jpg"></div>
+                    </div>
+
+                    <div class="ss_select">
+                        <p>Q：彼について聞いてみた</p><br>
+                        <a href="?page=ss&amp;ss=q2_1" class="selected">輝 : 01</a>
+                        <a href="?page=ss&amp;ss=q2_2">輝 : 02</a>
+                        <a href="?page=ss&amp;ss=q2_3">輝 : 03</a>
+                        <a href="?page=ss&amp;ss=q2_4">輝 : 04</a>
+                        <a href="?page=ss&amp;ss=q2_5">輝 : 05</a>
+                    </div>
+                    <div class="ss_box">
+                        <dl>
+                            <dt class="er">
+                                <img class="img-box">
+                            </dt>
+                            <dd>
+                                <div class="ss">
+                                    (기지개를 쭈욱 펴며 여전히 거침없는 걸음으로 중앙을 가로지른다.) 예
+                                    연무장이 도대체 어디요?
+                                </div>
+                            </dd>
+                            <dt class="sunset">
+                                <img class="img-box">
+                            </dt>
+                            <dd>
+                                <div class="ss">
+                                    ... ... (앞쪽에 멈추어 서, 연무장이 있는 방향을 향해 가리켰다.)
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="ss_box">
-        <dl>
-            <dt>
-                <img src="img/chara01.png">
-            </dt>
-            <dd>
-                <div class="ss" _msthash="1124214" _msttexthash="475871942"> (기지개를 쭈욱 펴며 여전히 거침없는 걸음으로 중앙을 가로지른다.) 예 연무장이 도대체 어디요? </div>
-            </dd>
-            <div class="clear"></div>
-            <dt>
-                <img src="img/chara02.png">
-            </dt>
-            <dd>
-                <div class="ss" _msthash="1126242" _msttexthash="191196330"> ... ... (앞쪽에 멈추어 서, 연무장이 있는 방향을 향해 가리켰다.)</div>
-            </dd>
-        </dl>
-    </div>
 </body>
-
-<script>
-/*====================================================*/
-//load完了後
-//ロード終了
-$(window).load(function () { //全ての読み込みが完了したら実行
-	// 0.1秒後に処理実行
-	setTimeout(function(){
-		$('#load').delay(0).fadeOut(200);
-	},400);
-	setTimeout(function(){
-		//$(".common_bg").addClass("loaded");
-	},500);
-	
-});
-
-//10秒たったら強制的にロード画面を非表示
-$(function(){
-  setTimeout('stopload()',10000);
-});
-function stopload(){
-	$('#load,#loader').delay(0).fadeOut(200);
-	//$(".common_bg").addClass("loaded");
-}
-</script>
 
 </html>

@@ -1,20 +1,30 @@
 @charset "utf-8";
-@font-face {
-    font-family: 'SEBANG_Gothic_Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SEBANG_Gothic_Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,600&display=swap');
 
+@font-face {
+    font-family: "SpoqaHanSansNeo-Bold";
+    src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.eot);
+    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.woff2) format("woff2"),
+        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.woff) format("woff"),
+        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "SpoqaHanSansNeo-Medium";
+    src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.eot);
+    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.woff2) format("woff2"),
+        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.woff) format("woff"),
+        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "SpoqaHanSansNeo-Regular";
+    src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.eot);
+    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.woff2) format("woff2"),
+        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.woff) format("woff"),
+        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.ttf) format("truetype");
+}
 /* media query */
 
 @mixin screen_max($screen) {
@@ -224,7 +234,7 @@ input,
 select,
 textarea {
     color: $color-black;
-    font-family: 'SEBANG_Gothic_Regular';
+    font-family: "SpoqaHanSansNeo-Regular";
     font-size: 1rem;
     letter-spacing: 0.0375em;
     line-height: 2;
@@ -249,7 +259,7 @@ a:active {
 strong,
 b {
     color: $color-black;
-    font-family: 'SEBANG_Gothic_Bold';
+    font-family: "SpoqaHanSansNeo-Bold";
 }
 
 em,
@@ -268,7 +278,7 @@ h4,
 h5,
 h6 {
     color: $color-black;
-    font-family: "Raleway", 'SEBANG_Gothic_Bold', Helvetica, sans-serif;
+    font-family: "Raleway", "SpoqaHanSansNeo-Bold", Helvetica, sans-serif;
     letter-spacing: 0.175em;
     line-height: 1.75;
     margin: 0 0 1.5rem 0;
