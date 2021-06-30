@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/style-t2.css">
+    <link rel="stylesheet" href="../css/style-t2.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -33,31 +33,25 @@
             <a href="?page=movie" class="">
                 <div>動画</div>
             </a>
-            <a href="?page=twitter">
-                <div>ツイッターアイテム</div>
-            </a>
-            <a href="javascript:void(0)" class="selected" rel="https://www.otomate.jp/d6/special/?page=ss">
-                <div>ショートストーリー</div>
-            </a>
-            <a href="?page=comment">
-                <div>キャストコメント</div>
-            </a>
         </div>
 
         <div class="second_box_content">
             <div id="ss_box_wrap" class="box_wrap">
                 <div class="box">
                     <div class="read" style="margin-bottom: 10px;">
-                        <div class="read_in"><img src="../img/special/read_ss.jpg"></div>
+                        <div class="read_in">
+                            <!-- <img src="../img/special/read_ss.jpg"> -->
+                            타이틀
+                        </div>
                     </div>
 
                     <div class="ss_select">
                         <p>Q：彼について聞いてみた</p><br>
-                        <a href="?page=ss&amp;ss=q2_1" class="selected">輝 : 01</a>
-                        <a href="?page=ss&amp;ss=q2_2">輝 : 02</a>
-                        <a href="?page=ss&amp;ss=q2_3">輝 : 03</a>
-                        <a href="?page=ss&amp;ss=q2_4">輝 : 04</a>
-                        <a href="?page=ss&amp;ss=q2_5">輝 : 05</a>
+                        <a href="q1_1" class="selected">輝 : 01</a>
+                        <a href="q1_2">輝 : 02</a>
+                        <a href="q1_3">輝 : 03</a>
+                        <a href="q1_4">輝 : 04</a>
+                        <a href="q1_5">輝 : 05</a>
                     </div>
                     <div class="ss_box">
                         <dl>
@@ -85,6 +79,32 @@
             </div>
         </div>
     </div>
+    <script>
+        $("nav  a:eq("+i+")").addClass("select");
+			$("nav a:not(:eq("+i+"))").removeClass("select");
+			var url   = location.href;
+			params    = url.split("?");
+			var paramArray = [];
+			for ( i = 0; i < params.length; i++ ) {
+				neet = params[i].split("=");
+				paramArray.push(neet[0]);
+				paramArray[neet[0]] = neet[1];
+			}
+			var menuNum = 0;
+			var selectPage = ["basic","extra"];
+			
+			for(var i=0; i < selectPage.length; i++){
+				if(paramArray["page"] === selectPage[i]){
+					menuNum = i;
+					break;
+				};
+			}
+			//驕ｸ謚樔ｸｭ縺ｮ鬆�岼
+			$(".sub_nav a").removeClass("selected");
+			$(".sub_nav a:eq("+menuNum+")").addClass("selected");
+			
+			/*====================================================*/
+    </script>
 </body>
 
 </html>

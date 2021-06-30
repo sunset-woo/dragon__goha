@@ -330,8 +330,8 @@ img {
 }
 
 .ss_box dl dt {
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
     padding: 0.5% 0;
     text-align: center;
     &.er {
@@ -355,7 +355,7 @@ img {
 }
 
 .ss_box dl dd {
-    width: calc(92% - 120px);
+    width: calc(92% - 90px);
     padding: 0.5% 1%;
     margin-top: 0.5%;
     margin-right: 2%;

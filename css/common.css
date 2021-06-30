@@ -1,0 +1,434 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,600&display=swap");
+@font-face {
+  font-family: "SpoqaHanSansNeo-Light";
+  src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.eot);
+  src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.woff2) format("woff2"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.woff) format("woff"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.eot);
+  src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.woff2) format("woff2"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.woff) format("woff"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "SpoqaHanSansNeo-Medium";
+  src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.eot);
+  src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.woff2) format("woff2"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.woff) format("woff"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "SpoqaHanSansNeo-Bold";
+  src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.eot);
+  src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.woff2) format("woff2"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.woff) format("woff"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'HomemadeApple';
+  src: url(../font/HomemadeApple/HomemadeApple-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InkLipquid';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 초기화 */
+html {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #616161;
+  font-size: 10pt;
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff;
+  font-family: "SpoqaHanSansNeo-Bold";
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.62em;
+}
+
+h3 {
+  font-size: 1.44em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+legend {
+  display: none;
+}
+
+label,
+input,
+button,
+select,
+img {
+  vertical-align: middle;
+}
+
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+textarea,
+select {
+  font-size: 1rem;
+}
+
+select {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  word-break: break-all;
+}
+
+hr {
+  display: none;
+}
+
+pre {
+  overflow-x: scroll;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+label {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+table {
+  width: 100%;
+}
+
+strong {
+  color: #ffffff;
+}
+
+/****** 커스텀 ******/
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #e4c7a6;
+}
+
+*::-webkit-scrollbar-track {
+  border-left: 1px solid #e0e0e0;
+  background-color: #eeeeee;
+}
+
+#btn_menu {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #927b52;
+  cursor: pointer;
+}
+
+#btn_menu .bar {
+  display: block;
+  width: 18px;
+  height: 3px;
+  background-color: #ffffff;
+}
+
+#btn_menu .bar:nth-child(2) {
+  margin-top: 3px;
+}
+
+#btn_menu .bar:nth-child(3) {
+  margin-top: 3px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+footer .page-list {
+  width: 150px;
+  color: #616161;
+}
+
+footer .page-list .pl-tit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 6px 25px;
+  color: #ffffff;
+  font-family: "SpoqaHanSansNeo-Medium";
+  border-radius: 0 10px 0 0;
+  background-color: #927b52;
+  cursor: pointer;
+}
+
+footer .page-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #f5f5f5;
+  background-color: #ffffff;
+}
+
+footer .page-info-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30%;
+  min-width: 200px;
+  padding: 12px 25px;
+  border-right: 1px solid #f5f5f5;
+}
+
+footer .page-info-detail .p-name-ko {
+  color: #000000;
+}
+
+footer .page-info-detail .p-name-de {
+  color: #9e9e9e;
+  font-family: "SpoqaHanSansNeo-Light";
+}
+
+footer .list-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .list-box li {
+  padding: .5rem;
+}
+
+footer .list-box div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 29px;
+  height: 29px;
+  color: #ffffff;
+  border-radius: 50%;
+  background-color: #927b52;
+  cursor: pointer;
+}
+
+footer nav {
+  width: calc(100% - 400px);
+}
+
+footer nav::before {
+  content: '';
+  position: absolute;
+  bottom: 28.5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e4c7a6;
+}
+
+footer nav ul {
+  position: relative;
+  padding: 1rem;
+}
+
+footer nav li.swiper-slide {
+  width: 125px;
+  margin: 0 !important;
+}
+
+footer nav li.swiper-slide em {
+  margin-left: 6.25px;
+  color: #e4c7a6;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+footer nav li.swiper-slide .dot {
+  display: block;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  margin-top: .5rem;
+}
+
+footer nav li.swiper-slide .dot::before, footer nav li.swiper-slide .dot::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  background-color: #e4c7a6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+footer nav li.swiper-slide .dot::before {
+  border: 1px solid;
+  border-color: #e4c7a6;
+}
+
+footer nav li.swiper-slide .dot::after {
+  z-index: 2;
+  border: 2px solid;
+  border-color: #e4c7a6;
+}
+
+footer nav li.swiper-slide:hover em, footer nav li.swiper-slide.on em {
+  color: #927b52;
+}
+
+footer nav li.swiper-slide:hover .dot::before, footer nav li.swiper-slide.on .dot::before {
+  border-color: #927b52;
+  border-radius: 50%;
+  background-color: transparent;
+  -webkit-transform: translate(-50%, -50%) scale(2.5);
+          transform: translate(-50%, -50%) scale(2.5);
+}
+
+footer nav li.swiper-slide:hover .dot::after, footer nav li.swiper-slide.on .dot::after {
+  border-color: #927b52;
+  background-color: #927b52;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#body .log {
+  width: 100%;
+  max-width: 700px;
+  margin: 75px auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#body p {
+  padding: .5em;
+  text-align: justify;
+  text-indent: 1em;
+  line-height: 2;
+}
+/*# sourceMappingURL=common.css.map */
