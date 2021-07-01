@@ -20,21 +20,34 @@
 </head>
 
 <body>
-    <div id="btn_menu">
-        <div class="bar-box">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-    </div>
-    <header></header>
+    <button id="btn_menu"></button>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li data-text="Home">Home</li>
+                <li data-text="Projects">Projects</li>
+                <li data-text="About">About</li>
+                <li data-text="Contact">Contact</li>
+            </ul>
+        </nav>
+    </header>
     <footer>
         <div class="page-list">
             <p class="pl-tit"><span>로그 목록</span><i class="fas fa-angle-up"></i></p>
-            <ul>
-                <li>
-                </li>
-            </ul>
+            <nav class="pl-list">
+                <ul>
+                    <li>
+                        <a href="">
+                            <span>偶</span><em>_ 짝</em>
+                        </a>
+                    </li>
+                    <li class="on">
+                        <a href="">
+                            <span>野遊會</span><em>_ 야유회</em>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
         <div class="page-info">
             <div class="page-info-detail">
@@ -55,14 +68,20 @@
             <nav class="swiper-container mySwiper">
                 <ul class="swiper-wrapper">
                     <li class="swiper-slide">
-                        <a href="./index.html">
-                            <em>01. aube</em>
+                        <a href="./spring_001.html">
+                            <em>1. aube</em>
                             <span class="dot"></span>
                         </a>
                     </li>
                     <li class="swiper-slide on">
-                        <a href="./page01.html">
-                            <em>02. rainier</em>
+                        <a href="./spring_002.html">
+                            <em>2. rainier</em>
+                            <span class="dot"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="./spring_003.html">
+                            <em>2.5. talk</em>
                             <span class="dot"></span>
                         </a>
                     </li>
@@ -78,6 +97,8 @@
     </footer>
     <div id="body">
         <div class="log">
+            <h2 class="log-tit-main">야유회</h2>
+            <h3 class="log-tit-sub">w. 유혜람</h3>
             <p>문득 고개를 들었을 때, 창을 때리는 빗소리가 요란했다. 라니에가 알기로는, 두 사람은 오늘 분명 저택에서 마차를 타고 남쪽으로 얼마간 내려가면 도착하는 호수에서 피크닉을 즐길 거라고 하지 않았던가. 이른 아침부터 내리던 부슬비는 곧 그칠 것처럼 굴더니 오전 업무를 마치는 사이에 폭우가 되어버린 탓에, 라니에는 지난 티타임에서 살풋 웃는 얼굴로 이야기하던 솔레유 레클립스의 목소리가 절로 떠오른 것이다.</p>
             <p>3년간 시간이 나는 대로, 이마저도 레클립스 후작이자 록시나 기사단 1소대의 커맨더가 사적으로 사용할 수 있는 시간이 턱없이 모자라 라니에로서는 부족하다고 생각하지만, 부녀를 데리고 피크닉이라는 이름으로 여기저기 끌고 다닌 보람이 있었다. 이제는 굳이 자신이 끼어들지 않아도 솔레유가 먼저 말을 꺼내게 되었으니.</p>
             <p>'그래도 아직은 특별한 일이라고 여기는 건가….'</p>
@@ -102,6 +123,15 @@
             <p>"선택은 솔레유 님이."</p>
         </div>
     </div>
+
+    <script>
+        $('.pl-tit').on('click', function() {
+            $('.page-list').toggleClass('open');
+        });
+        $('#btn_menu').on('click', function() {
+            $('body').toggleClass('open');
+        });
+    </script>
 </body>
 
 </html>
