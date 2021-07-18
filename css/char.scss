@@ -1,38 +1,28 @@
 @charset "utf-8";
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,600&display=swap');
-
 // font-set
 @font-face {
     font-family: "SpoqaHanSansNeo-Light";
     src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.eot);
-    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.woff2) format("woff2"),
-        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.woff) format("woff"),
-        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.ttf) format("truetype");
+    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.woff2) format("woff2"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.woff) format("woff"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "SpoqaHanSansNeo-Regular";
     src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.eot);
-    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.woff2) format("woff2"),
-        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.woff) format("woff"),
-        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.ttf) format("truetype");
+    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.woff2) format("woff2"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.woff) format("woff"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "SpoqaHanSansNeo-Medium";
     src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.eot);
-    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.woff2) format("woff2"),
-        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.woff) format("woff"),
-        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.ttf) format("truetype");
+    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.woff2) format("woff2"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.woff) format("woff"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "SpoqaHanSansNeo-Bold";
     src: url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.eot);
-    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.woff2) format("woff2"),
-        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.woff) format("woff"),
-        url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.ttf) format("truetype");
+    src: local(☺), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.woff2) format("woff2"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.woff) format("woff"), url(../font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.ttf) format("truetype");
 }
 
 @font-face {
@@ -55,7 +45,6 @@ $font-M: "SpoqaHanSansNeo-Medium";
 $font-B: "SpoqaHanSansNeo-Bold";
 $font-hand: 'HomemadeApple',
 'InkLipquid';
-
 // media query
 @mixin screen_max($screen) {
     @media screen and (max-width: $screen) {
@@ -74,7 +63,6 @@ $color-gray: #999;
 $color-point-main: #c0ed29;
 $color-point-sub: #418368;
 $color-background: #24282d;
-
 // color-grey-scale
 $color-w0: #ffffff;
 $color-w1: #f5f5f5;
@@ -87,7 +75,6 @@ $color-b2: #616161;
 $color-b1: #424242;
 $color-b0: #000000;
 
-
 /* 초기화 */
 
 html {
@@ -98,6 +85,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    // font-size: 10pt;
     color: $color-w4;
     font-family: $font-R;
 }
@@ -250,7 +238,6 @@ strong {
     position: absolute;
     z-index: 2;
     margin: -.5rem;
-
     &.top {
         top: 3rem;
     }
@@ -263,7 +250,6 @@ strong {
     &.right {
         right: 3rem;
     }
-
     .dot {
         display: inline-block;
         width: .5rem;
@@ -302,7 +288,7 @@ strong {
     color: $color-point-main;
     font-size: 2rem;
     font-family: $font-hand;
-    font-style: italic; 
+    font-style: italic;
     letter-spacing: .25rem;
     line-height: 1;
     transform: rotate(-10deg);
@@ -337,7 +323,6 @@ strong {
     right: 0;
     bottom: 0;
     text-align: center;
-
     .ch-talk {
         padding: 2rem 1rem 0;
         color: $color-point-main;
@@ -345,32 +330,26 @@ strong {
         font-family: $font-hand;
         color: $color-w0;
         background: linear-gradient(to bottom, rgba($color-b0, 0) 0%, rgba($color-b0, .75) 100%);
-
         &::before,
         &::after {
             display: inline-block;
             font-family: sans-serif;
         }
-
         &::before {
             content: '\301E';
             margin-right: 5vw;
         }
-
         &::after {
             margin-left: 6vw;
             content: '\301F';
         }
     }
-
     &-detail {
         padding: .25rem 1rem 94px;
         background: linear-gradient(to bottom, rgba($color-b0, .75) 0%, rgba($color-b0, 1) 100%);
     }
-
     span {
         color: $color-w4;
-
         &:not(:last-child) {
             &::after {
                 content: '';
@@ -382,7 +361,6 @@ strong {
                 background-color: $color-b2;
             }
         }
-
         &.ch-name-ko {
             font-family: $font-M;
         }
